@@ -15,3 +15,24 @@ body {
   overflow: hidden;
   margin: 0;
 }
+
+.container {
+  position: relative;
+}
+
+#backgroundImg {
+  width: 100vw;
+  height: 100vh;
+  /* overflow-y: hidden; */
+  /* opacity: 0.5; */
+  /* height: auto; */
+  /* background-position: center center; */
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
