@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
 }
 
@@ -27,13 +27,27 @@ navbar {
   text-align: center;
 }
 
+/* navbar ul {
+  justify-content: space-between;
+} */
+
 navbar a {
   color: white;
   text-decoration: none;
 }
 
-.container {
-  position: relative;
+navbar a:hover {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  /* text-align: center; */
+  /* text-decoration: none; */
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  /* cursor: pointer; */
 }
 
 #backgroundImg {
@@ -50,7 +64,7 @@ navbar a {
   height: 100px;
 }
 
-.center {
+#logoCenterText {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -58,11 +72,41 @@ navbar a {
   font-size: 30px;
 }
 
+.container {
+  position: relative;
+  background-color: lightgreen;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px 200px 10px 200px;
+  font-size: 1.2em;
+}
+
+.merchItems {
+  background-color: lightpink;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1em;
+}
+
+.blogPosts {
+  background-color: lightpink;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1em;
+  width: 300px;
+  text-indent: 50px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 footer {
   text-align: center;
-  position: absolute;
+  /* position: fixed; */
+  /* position: absolute; */
   color: #fff;
-  bottom: 0;
+  /* bottom: 0; */
   background-color: black;
   width: 100%;
   padding: 5px;
