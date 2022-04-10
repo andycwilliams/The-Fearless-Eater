@@ -101,6 +101,17 @@ navbar a:hover {
   text-justify: inter-word;
 }
 
+#contact {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+#contactContainer {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
 footer {
   text-align: center;
   /* position: fixed; */
