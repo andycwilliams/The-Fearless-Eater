@@ -17,13 +17,14 @@ body {
 }
 
 navbar {
-  /* background-color: black; */
+  background-color: black;
   display: inline-block;
   padding: 5px;
   position: fixed;
   text-align: center;
   top: 0;
   width: 100%;
+  vertical-align: middle;
   /* font-size: 1.25em; */
   /* z-index: 1; */
 }
@@ -61,8 +62,8 @@ navbar a:hover {
 }
 
 #logo {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 #logoCenterText {
@@ -76,6 +77,7 @@ navbar a:hover {
 .container {
   background-color: black;
   border: 1px solid black;
+  color: white;
   font-size: 1.2em;
   margin: 10px 200px 10px 200px;
   padding: 10px;
@@ -84,7 +86,7 @@ navbar a:hover {
 }
 
 .merchItems {
-  background-color: lightpink;
+  background-color: darkgrey;
   border: 1px solid black;
   display: inline-block;
   padding: 10px;
@@ -93,7 +95,7 @@ navbar a:hover {
 }
 
 .blogPosts {
-  background-color: lightpink;
+  background-color: darkgrey;
   border: 1px solid black;
   display: inline-block;
   font-size: 1em;
