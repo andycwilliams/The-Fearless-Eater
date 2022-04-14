@@ -6,25 +6,26 @@
 /* You can add this to just about everything. If you add any padding or border to an element, it won't affect the width of it */
 
 body {
-  font-family: "Roboto", sans-serif;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-family: "Roboto", sans-serif;
   height: 100vh;
-  overflow-x: hidden;
+  justify-content: center;
   margin: 0;
+  overflow-x: hidden;
 }
 
 navbar {
-  top: 0;
-  position: fixed;
-  background-color: black;
-  width: 100%;
+  /* background-color: black; */
+  display: inline-block;
   padding: 5px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
   /* font-size: 1.25em; */
   /* z-index: 1; */
-  text-align: center;
 }
 
 /* navbar ul {
@@ -40,22 +41,22 @@ navbar a:hover {
   background-color: white;
   border: none;
   color: black;
+  font-size: 16px;
+  margin: 4px 2px;
   padding: 16px 32px;
+  transition-duration: 0.4s;
   /* text-align: center; */
   /* text-decoration: none; */
   /* display: inline-block; */
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
   /* cursor: pointer; */
 }
 
 #backgroundImg {
+  height: auto;
   /* width: 100vw; */
   /* height: 100px; */
   /* overflow-y: hidden; */
   /* opacity: 0.5; */
-  height: auto;
   /* background-position: center center; */
 }
 
@@ -65,26 +66,27 @@ navbar a:hover {
 }
 
 #logoCenterText {
+  font-size: 30px;
+  left: 50%;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
 }
 
 .container {
-  /* position: relative; */
-  background-color: lightgreen;
+  background-color: black;
   border: 1px solid black;
-  padding: 10px;
-  margin: 10px 200px 10px 200px;
   font-size: 1.2em;
+  margin: 10px 200px 10px 200px;
+  padding: 10px;
+  /* position: relative; */
   text-align: center;
 }
 
 .merchItems {
   background-color: lightpink;
   border: 1px solid black;
+  display: inline-block;
   padding: 10px;
   margin: 10px;
   font-size: 1em;
@@ -93,36 +95,57 @@ navbar a:hover {
 .blogPosts {
   background-color: lightpink;
   border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  display: inline-block;
   font-size: 1em;
-  width: 300px;
-  text-indent: 50px;
+  height: 400px;
+  margin: 10px;
+  padding: 10px;
   text-align: justify;
+  text-indent: 50px;
   text-justify: inter-word;
+  width: 300px;
 }
 
 #contact {
   display: flex;
   flex-direction: column;
-  width: 30%;
   text-align: center;
+  width: 30%;
 }
 
 #contactContainer {
   background-color: #f2f2f2;
-  padding: 20px;
   border: 1px solid black;
+  padding: 20px;
+}
+
+.btn {
+  background-color: white;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.btn:hover {
+  background-color: darkgrey;
+  color: white;
 }
 
 footer {
   text-align: center;
-  /* position: fixed; */
-  /* position: absolute; */
   color: #fff;
-  /* bottom: 0; */
   background-color: black;
   width: 100%;
   padding: 5px;
+  /* position: fixed; */
+  /* position: absolute; */
+  /* bottom: 0; */
   /* z-index: 1; */
 }
