@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./styles/reset.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./styles/reset.css" /> -->
     <script
       src="https://kit.fontawesome.com/9fe2511282.js"
       crossorigin="anonymous"
@@ -14,17 +14,13 @@
   <div>BANNER NOTIFICATION AT TOP WITH X BUTTON</div>
 
   <body>
-    <div>
-      <img
-        id="backgroundImg"
-        src="./assets/pexels-photo-67468.jpeg"
-        alt="Main Restaurant Photo"
-      />
-      <h1 id="logoCenterText">The Fearless Eater</h1>
+    <div class="bgContainer">
+      <img src="./assets/pexels-photo-67468.jpeg" alt="Main Restaurant Photo" />
+      <h1>The Fearless Eater</h1>
     </div>
 
     <navbar>
-      <img id="logo" src="./assets/image.png" />
+      <!-- <img id="logo" src="./assets/image.png" /> -->
       <a href="/About">About</a>
       <a href="/Menu">Menu</a>
       <a href="/Order">Order Online</a>
@@ -46,36 +42,41 @@
       <div class="center">Centered</div>
     </div> -->
 
-    <div class="container">
+    <div class="box one">
       <h1>MERCH</h1>
       <div class="merchItems">
         <h1>Shirt</h1>
-        <img
-          src="./assets/Placeholder.png"
-          alt="Placeholder"
-          style="height: 150px; width: 150px"
-        />
+        <a href="">
+          <img
+            src="./assets/Placeholder.png"
+            alt="Placeholder"
+            style="height: 150px; width: 150px"
+        /></a>
       </div>
       <div class="merchItems">
         <h1>Mug</h1>
-        <img
-          src="./assets/Placeholder.png"
-          alt="Placeholder"
-          style="height: 150px; width: 150px"
-        />
+        <a href="">
+          <img
+            src="./assets/Placeholder.png"
+            alt="Placeholder"
+            style="height: 150px; width: 150px"
+        /></a>
       </div>
       <div class="merchItems">
         <h1>Hat</h1>
-        <img
-          src="./assets/Placeholder.png"
-          alt="Placeholder"
-          style="height: 150px; width: 150px"
-        />
+        <a href="">
+          <img
+            src="./assets/Placeholder.png"
+            alt="Placeholder"
+            style="height: 150px; width: 150px"
+        /></a>
       </div>
     </div>
 
-    <div class="container">
-      <h1>BLOG POSTS</h1>
+    <div class="box two">
+      <h1>
+        <a href="">BLOG POSTS</a>
+      </h1>
       <div class="blogPosts">
         <h1>Title</h1>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
@@ -113,8 +114,8 @@
     </div>
 
     <div id="contact">
-      <h1>Contact</h1>
       <div id="contactContainer">
+        <h1>Contact</h1>
         <form action="action_page.php">
           <label for="first_name">First Name</label>
           <input
@@ -160,12 +161,21 @@
     </div>
 
     <footer>
-      <i class="fa-brands fa-facebook" style="font-size: 3em; color: white"></i>
+      <i
+        class="fa-brands fa-facebook"
+        href=""
+        style="font-size: 2em; color: white"
+      ></i>
       <i
         class="fa-brands fa-instagram"
-        style="font-size: 3em; color: white"
+        href=""
+        style="font-size: 2em; color: white"
       ></i>
-      <i class="fa-brands fa-twitter" style="font-size: 3em; color: white"></i>
+      <i
+        class="fa-brands fa-twitter"
+        href=""
+        style="font-size: 2em; color: white"
+      ></i>
       <img id="logo" src="./assets/image.png" />
       <div>123 Real Street Realcity, Realstate 12345</div>
       <div>(123) 456-7890</div>
