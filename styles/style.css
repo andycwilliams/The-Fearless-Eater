@@ -28,7 +28,7 @@ navbar {
   width: 100%;
   vertical-align: middle;
   /* font-size: 1.25em; */
-  /* z-index: 1; */
+  z-index: 1;
 }
 
 /* navbar ul {
@@ -52,6 +52,12 @@ navbar a:hover {
   /* text-decoration: none; */
   /* display: inline-block; */
   /* cursor: pointer; */
+}
+
+.banner {
+  background-color: lightgrey;
+  color: black;
+  width: 100vw;
 }
 
 /* -------------------- Background Images -------------------- */
@@ -253,4 +259,5 @@ footer {
   /* position: absolute; */
   /* bottom: 0; */
   /* z-index: 1; */
+  /* display: inline-block; */
 }
