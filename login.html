@@ -83,8 +83,11 @@
     </div>
 
     <div class="loggedInCheck">
+      <button class="loggedinBtn">Click to reveal content</button>
       <div class="loggedOut">You are logged out!</div>
-      <div class="loggedIn">You should only see this if you're logged in!</div>
+      <div class="loggedIn" data-state="hidden">
+        This is a secret! You should only see this if you're logged in!
+      </div>
     </div>
     <script src="scripts/script.js"></script>
   </body>

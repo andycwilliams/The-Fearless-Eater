@@ -1,6 +1,8 @@
 # The-Fearless-Eater
 
-Alternate names: Fare &amp; Feed/Feed &amp; Fare, Flavour Slam(mer), Flavor Jail, Dainty Dog, Tum Tum Express, Distinctive Eats/Creations, Fit Hits, The Vibe, Prancing Pig, Aaron's, Fig's BBQ, Atomic([']s), Kasselburg, Yes Way, Abundance
+Web page for a prospective small business. Features account creation functionality and ability to fill out contact form and simulate ordering items.
+
+Alternate names: Feed &amp; Fare, Flavo(u)r Slam(mer), Flavo(u)r Jail/Gaol/Prison, Dainty Dog, Tum Tum Express, Distinctive Eats/Creations, Fit Hits, Prancing Pig(let), (Barren) Aaron's, Fig's BBQ, Atomic([']s), Kasselburg, Yes Way
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

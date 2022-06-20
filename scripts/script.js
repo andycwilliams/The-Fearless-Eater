@@ -46,4 +46,21 @@ function generatePool() {
   document.getElementById("finalPassword").innerHTML = result;
 }
 
-// --------------------------------  --------------------------------
+// -------------------------------- Logged In --------------------------------
+
+document
+  .querySelector(".loggedinBtn")
+  .addEventListener("click", function (event) {
+    // console.log("Click!");
+    const element = document.querySelector(".loggedIn");
+    const state = element.getAttribute("data-state");
+
+    if (state == "hidden") {
+      console.log("Data will now be VISIBLE");
+      element.dataset.state = "visible";
+    } else {
+      console.log("Data will now be HIDDEN");
+      // element.setAttribute("data-state", "hidden");
+      element.dataset.state = "hidden";
+    }
+  });
