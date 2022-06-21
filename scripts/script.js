@@ -8,8 +8,8 @@
 
 // -------------------------------- Password Generator --------------------------------
 
-const finalPassword = document.querySelector("#finalPassword");
-const generateEl = document.querySelector("#generate");
+const finalPassword = document.querySelector(".passwordResult");
+const generateEl = document.querySelector(".generatePassword");
 let userArr = [];
 
 const charTypeArr = {
@@ -62,5 +62,28 @@ document
       console.log("Data will now be HIDDEN");
       // element.setAttribute("data-state", "hidden");
       element.dataset.state = "hidden";
+    }
+  });
+
+document
+  .querySelector(".testContainer")
+  .addEventListener("click", function (event) {
+    const element = event.target;
+
+    if (element.matches(".box")) {
+      const state = element.getAttribute("data-state");
+
+      // Use an if statement to conditionally render the number on the card
+      if (state === "hidden") {
+        // If the card is clicked while the state is "hidden", we set .textContent to the number
+        element.textContent = element.dataset.number;
+        // Using the dataset property, we change the state to visible because the user can now see the number
+        element.dataset.state = "visible";
+      } else {
+        // 'Hide' the number by setting .textContent to an empty string
+        element.textContent = "";
+        // Use .setAttribute() method
+        element.setAttribute("data-state", "hidden");
+      }
     }
   });
