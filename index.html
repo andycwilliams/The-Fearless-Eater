@@ -15,40 +15,25 @@
   <div class="notificationBar">BANNER NOTIFICATION AT TOP WITH X BUTTON</div>
 
   <body>
-    <!-- <div class="bgContainer">
-      <img src="./assets/pexels-photo-67468.jpeg" alt="Main Restaurant Photo" />
-      <h1>The Fearless Eater</h1>
-    </div> -->
-
     <navbar>
-      <!-- <img id="logo" src="./assets/image.png" /> -->
+      <img id="logo" src="./assets/image.png" />
       <a href="/About">About</a>
       <a href="/Menu">Menu</a>
       <a href="/Order">Order Online</a>
       <a href="/Store">Store</a>
-      <a href="/login.html">Login</a>
       <a href="#" style="float: right">Cart 🛒</a>
+      <a href="/login.html" style="float: right">Login</a>
     </navbar>
 
-    <!-- <h2>Image Text</h2>
+    <div class="banner"></div>
 
-    <p>Center text in image:</p>
-
-    <div class="container">
-      <img
-        src="./assets/pexels-photo-67468.jpeg"
-        alt="Cinque Terre"
-        width="1000"
-        height="300"
-      />
-      <div class="center">Centered</div>
-    </div> -->
-
-    <img
-      class="backgroundImgOne"
-      src="./assets/pexels-photo-67468.jpeg"
-      alt="Background image"
-    />
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>The Fearless Eater</h1>
+        <p>Since 1997</p>
+        <button>Order now</button>
+      </div>
+    </div>
 
     <div class="boxOne">
       <h1>Title</h1>
@@ -157,56 +142,57 @@
       vero.
     </div>
 
-    <div id="contact">
-      <div id="contactContainer">
-        <h1>Contact</h1>
-        <form action="action_page.php">
-          <label for="first_name">First Name</label>
-          <input
-            type="text"
-            id="first_name"
-            name="firstname"
-            placeholder="Your first name..."
-          />
-
-          <label for="last_name">Last Name</label>
-          <input
-            type="text"
-            id="last_name"
-            name="lastname"
-            placeholder="Your last name..."
-          />
-
-          <label for="email_address">Email Address</label>
-          <input
-            type="text"
-            id="email_address"
-            name="email"
-            placeholder="Your email..."
-          />
-
-          <label for="country_name">Country</label>
-          <select id="country_name" name="country">
-            <option value="usa">USA</option>
-            <option value="canada">Canada</option>
-            <option value="australia">Australia</option>
-          </select>
-
-          <label for="subject_content">Subject</label>
-          <textarea
-            id="subject_content"
-            name="subject"
-            placeholder="Your message..."
-            style="height: 100px"
-          ></textarea>
-        </form>
-        <button class="btn">Send</button>
+    <div class="contactContainer">
+      <div style="text-align: center">
+        <h2>Contact</h2>
+        <p>Got a burning question? We're just an email away!</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Enter your first name"
+            />
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Enter your last name"
+            />
+            <label for="email_address">Email Address</label>
+            <input
+              type="text"
+              id="email_address"
+              name="email"
+              placeholder="Enter your email"
+            />
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+            <label for="subject">Subject</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Enter your message"
+              style="height: 170px"
+            ></textarea>
+            <input type="submit" value="Submit" class="btn" />
+          </form>
+        </div>
       </div>
     </div>
 
     <footer>
       <img id="logo" src="./assets/image.png" />
-      <p>THE FEARLESS EATER. Since 1997</p>
+      <p>THE FEARLESS EATER <i>since 1997</i></p>
       <i
         class="fa-brands fa-facebook"
         href=""
@@ -227,7 +213,6 @@
       <div>(123) 456-7890</div>
       <div>HOURS Monday through Friday, 12PM - 8PM <i>Closed weekends</i></div>
       <div>ORDER ONLINE OR CALL IN</div>
-      <div>CONTACT</div>
     </footer>
 
     <script src="scripts/script.js"></script>

@@ -2,8 +2,6 @@
 
 Web page for a prospective small business. Features account creation functionality and ability to fill out contact form and simulate ordering items.
 
-Alternate names: Feed &amp; Fare, Flavo(u)r Slam(mer), Flavo(u)r Jail/Gaol/Prison, Dainty Dog, Tum Tum Express, Distinctive Eats/Creations, Fit Hits, Prancing Pig(let), (Barren) Aaron's, Fig's BBQ, Atomic([']s), Kasselburg, Yes Way
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <!-- ![Screenshot of deployed application, homepage of site with timer and random tip](/screenshot.png?raw=true "Screenshot of deployed application")
