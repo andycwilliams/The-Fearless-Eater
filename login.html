@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/9fe2511282.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <link rel="stylesheet" href="./styles/style2.css" />
     <title>Login Form</title>
   </head>
@@ -15,7 +15,7 @@
     <!-- <h1>Create an Account</h1> -->
     <a href="/index.html"><h1>Home</h1> </a>
 
-    <form class="container">
+    <form class="container loginContainer">
       <h3>Create an account:</h3>
       <!-- <form action="/action_page.php"></form> -->
       <div for="usernameField">Username:</div>
@@ -32,13 +32,22 @@
         name="passwordField"
         placeholder="Enter a password..."
       /><br />
-      <button>Generate a password</button>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" class="btn" />
+      <button class="passwordHelperBtn">Need help creating a password?</button>
+      <div class="passwordHelper">
+        <div class="passwordResult">Your password:</div>
+        <textarea
+          id="finalPasswordOutput"
+          rows="1"
+          cols="64"
+          readonly
+        ></textarea
+        ><br />
+        <button class="generatePassword">Generate Password</button>
+      </div>
       <button class="alreadyAccount">
         Already have an account? Sign in here.
       </button>
-      <div class="passwordResult">Your password:</div>
-      <button class="btn generatePassword">Generate Password</button>
     </form>
 
     <!-- <form class="container">
@@ -64,9 +73,9 @@
       </button>
     </form> -->
 
-    <div class="container">
-      <h1>Please Login</h1>
-      <h3>ADD VERIFICATION</h3>
+    <div class="container createAccountContainer">
+      <h1>Login</h1>
+      <h3>------ADD VERIFICATION-----</h3>
       <form>
         <div class="form-control">
           <input type="text" required />
@@ -84,7 +93,7 @@
       </form>
     </div>
 
-    <div class="loggedInCheck">
+    <div class="container loggedInCheck">
       <button class="loggedinBtn">Click to reveal content</button>
       <div class="loggedOut">You are logged out!</div>
       <div class="loggedIn" data-state="hidden">
