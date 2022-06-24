@@ -31,25 +31,19 @@ body {
 
 navbar {
   background-color: black;
-  /* display: inline-block; */
-  height: 75px;
+  height: 85px;
   padding: 5px;
   position: fixed;
   text-align: center;
   top: 0;
   width: 100%;
-  /* vertical-align: middle; */
   /* font-size: 1.25em; */
   z-index: 1;
 }
 
-/* navbar ul {
-  justify-content: space-between;
-} */
-
 navbar a {
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   margin: 4px 2px;
   padding: 16px 32px;
   text-decoration: none;
@@ -59,50 +53,33 @@ navbar a:hover {
   background-color: white;
   border: none;
   color: black;
-  /* font-size: 16px; */
-  /* margin: 4px 2px; */
-  /* padding: 16px 32px; */
   transition-duration: 0.4s;
-  /* text-align: center; */
-  /* text-decoration: none; */
-  /* display: inline-block; */
-  /* cursor: pointer; */
 }
 
-/* .banner {
+navbar a:focus {
+  transform: scale(0.9);
+}
+
+.banner {
   background-color: lightgrey;
   color: black;
   width: 100vw;
-} */
+}
 
-/* -------------------- Background Images -------------------- */
+/* -------------------- Main Background Image -------------------- */
 
-/* .bgContainer img { */
-/* height: auto; */
-/* opacity: 0.8;   */
-/* width: 100vw; */
-/* overflow-y: hidden; */
-/* background-position: center center; */
-/* } */
-
-/* The hero image */
-.hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+.mainImage {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/pexels-photo-67468.jpeg");
-
-  /* Set a specific height */
-  height: 50%;
-
-  /* Position and center the image to scale nicely on all screens */
+  height: 65%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
-/* Place text in the middle of the image */
-.hero-text {
+.mainText {
+  font-size: 20px;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -111,49 +88,43 @@ navbar a:hover {
   color: white;
 }
 
-.backgroundImgOne {
-  /* background-image: "C:\Users\awill\code\__Personal Projects__\The-Fearless-Eater\assets\pexels-photo-67468.jpeg"; */
-  /* width: 100vw; */
-  /* min-height: 500px; */
-  /* min-width: 100%; */
-  height: 500px;
-  width: 100%;
-  /* background-position: center center; */
-  object-fit: cover;
-
-  /* height: "300px"; */
-
-  /* position: relative; */
-  /* opacity: 0.65; */
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.mainText h1 {
+  font-size: 60px;
 }
 
-.backgroundImgTwo {
-  /* position: relative; */
-  height: 750px;
-  width: 100%;
-  object-fit: cover;
+.mainText button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  /* display: inline-block; */
+  font-size: 18px;
+  margin: 4px 2px;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+}
 
-  /* background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
+.mainText button:hover {
+  background-color: black;
+  color: white;
+  transition-duration: 0.2s;
+}
+
+/* -------------------- Background Images -------------------- */
+
+.backgroundImgTwo {
+  height: 750px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .backgroundImgThree {
-  position: relative;
   height: 750px;
-  width: 100%;
   object-fit: cover;
-
-  /* background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
+  position: relative;
+  width: 100%;
 }
 
 .backgroundImgFour {
@@ -166,14 +137,6 @@ navbar a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
-}
-
-.bgContainer1 h1 {
-  font-size: 60px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 #logo {
@@ -215,9 +178,9 @@ navbar a:hover {
   border: 1px solid black;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   display: inline-block;
-  padding: 10px;
-  margin: 10px;
   font-size: 1em;
+  margin: 10px;
+  padding: 10px;
 }
 
 .overlay1 {
