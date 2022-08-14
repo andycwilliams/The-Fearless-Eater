@@ -1,6 +1,8 @@
 # The-Fearless-Eater
 
-Web page for a prospective small business. Features account creation functionality and ability to fill out contact form and simulate ordering items.
+Web page for a prospective small business.
+
+Features account creation functionality and ability to fill out contact form and simulate ordering items.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

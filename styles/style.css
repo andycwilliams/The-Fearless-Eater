@@ -115,7 +115,7 @@ navbar a:focus {
 /* -------------------- Background Images -------------------- */
 
 .backgroundImgTwo {
-  height: 690px;
+  height: 600px;
   object-fit: cover;
   width: 100%;
 }
