@@ -1,5 +1,7 @@
 # The-Fearless-Eater
 
+<!-- MAKE MOBILE VERSION TOO? -->
+
 Web page for a fictional small business.
 
 Features account creation functionality and simulate ordering items.
