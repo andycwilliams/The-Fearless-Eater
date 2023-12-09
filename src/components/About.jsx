@@ -26,46 +26,11 @@ import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-// React Router Bootstrap Imports
-// import { LinkContainer } from 'react-router-bootstrap';
-// Custom Imports
-import { About, ContactForm, Footer, Header, Hero, Menu } from "./components";
 
-function App() {
+const About = () => {
   return (
-    <Container
-    // className="p-3"
-    >
-      <Container
-      // className="p-5 mb-4 bg-light rounded-3"
-      >
-        {/* Navbar */}
-        <Header />
-      </Container>
-      {/* Main */}
-      {/* Hero */}
-      <Hero />
-      {/* About */}
-      <About />
-      {/* Menu */}
-      <Menu />
-
-      {/* <Form inline>
-        <InputGroup>
-          <InputGroup.Text id="testId">Inline Form Test</InputGroup.Text>
-          <Form.Control
-            placeholder="testField"
-            aria-label="testField"
-            aria-describedby="testId"
-          />
-        </InputGroup>
-      </Form> */}
-      {/* Contact form */}
-      <ContactForm />
-      {/* Footer */}
-      <Footer />
-    </Container>
-  );
+    <div>About</div>
+  )
 }
 
-export default App;
+export default About
