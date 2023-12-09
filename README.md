@@ -1,26 +1,10 @@
 # The-Fearless-Eater
 
-<!-- MAKE MOBILE VERSION TOO? -->
-
 Web page for a fictional small business.
 
-Features account creation functionality and simulate ordering items.
+Uses React and Bootstrap
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-<!-- ![Screenshot of deployed application, homepage of site with timer and random tip](/screenshot.png?raw=true "Screenshot of deployed application")
- -->
-
-Adapted from Bootstrap template:
-
-```
-=======================================================
- * Template Name: Impact - v1.0.0
- * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
-========================================================
-```
 
 ## Table of Contents
 
