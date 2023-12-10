@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // React Imports
 import { useState } from "react";
 // Bootstrap Imports
@@ -26,11 +27,59 @@ import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+// Other Imports
+import dayjs from "dayjs";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <Card.Footer className="text-center">
+      <Container>
+        <Row>
+          <Col>
+            <Stack direction="vertical" gap={0}>
+              <div className="">Address</div>
+              <div className="">123 Fake Street</div>
+              <div className="">Chicago, IL 11111</div>
+            </Stack>
+          </Col>
+          <Col>
+            <Stack direction="vertical" gap={0}>
+              <div className="">Phone number/email</div>
+              <div className="">555-555-5555</div>
+              <div className="">PLACEHOLDER</div>
+            </Stack>
+          </Col>
+          <Col>
+            <Stack direction="vertical" gap={0}>
+              <div className="">Hours</div>
+              <div className="">Sunday 4-9 PM</div>
+              <div className="">Monday Closed</div>
+              <div className="">Tuesday Closed</div>
+              <div className="">Wednesday 4-9 PM</div>
+              <div className="">Thursday 4-9 PM</div>
+              <div className="">Friday 4-9 PM</div>
+              <div className="">Saturday 5-6 PM</div>
+            </Stack>
+          </Col>
+          <Col>
+            <Stack direction="vertical" gap={0}>
+              <div className="">Social media links</div>
+              <div className="">Links</div>
+            </Stack>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="text-muted">
+            {"Copyright ©" + dayjs().year()}
+            <a color="inherit" href="/">
+              The Fearless Eater
+            </a>
+            {"."}
+          </Col>
+        </Row>
+      </Container>
+    </Card.Footer>
+  );
+};
 
-export default Footer
+export default Footer;

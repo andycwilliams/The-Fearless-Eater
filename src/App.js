@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // React Imports
 import { useState } from "react";
 // Bootstrap Imports
@@ -36,32 +37,23 @@ function App() {
     <Container
     // className="p-3"
     >
-      <Container
-      // className="p-5 mb-4 bg-light rounded-3"
-      >
-        {/* Navbar */}
-        <Header />
-      </Container>
+      {/* Header */}
+      <Header />
+
       {/* Main */}
+
       {/* Hero */}
       <Hero />
+
       {/* About */}
       <About />
+
       {/* Menu */}
       <Menu />
 
-      {/* <Form inline>
-        <InputGroup>
-          <InputGroup.Text id="testId">Inline Form Test</InputGroup.Text>
-          <Form.Control
-            placeholder="testField"
-            aria-label="testField"
-            aria-describedby="testId"
-          />
-        </InputGroup>
-      </Form> */}
       {/* Contact form */}
       <ContactForm />
+
       {/* Footer */}
       <Footer />
     </Container>

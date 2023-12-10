@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // React Imports
 import { useState } from "react";
 // Bootstrap Imports
@@ -28,9 +29,92 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 
 const ContactForm = () => {
-  return (
-    <div>ContactForm</div>
-  )
-}
+  const [validated, setValidated] = useState(false);
 
-export default ContactForm
+  const handleSubmit = (e) => {
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    setValidated(true);
+  };
+
+  return (
+    <Container id="contact">
+      <Card.Title>Contact</Card.Title>
+      <Card.Text></Card.Text>
+      <Card.Text></Card.Text>
+      <Card.Text>
+        To reserve a time,...For questions or special restrictions...We will do
+        our best to accommodate your needs.
+      </Card.Text>
+      <Card.Text>
+        You can contact us by phone 555-555-5555 or email PLACEHOLDER or send us
+        a message here:
+      </Card.Text>
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="contactFormName">
+          {/* <Form.Label>Name</Form.Label> */}
+          <Form.Control
+            type="password"
+            placeholder="Enter your name"
+            required
+          />
+          <Form.Control.Feedback type="invalid">
+            Please provide your name.
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="contactFormEmail">
+          {/* <Form.Label>Email</Form.Label> */}
+          <Form.Control
+            type="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <Form.Control.Feedback type="invalid">
+            Please provide an email address.
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="contactFormReservationTime">
+          {/* <Form.Label>Reservation time</Form.Label> */}
+          <Form.Control
+            placeholder="Enter your desired reservation time"
+            required
+          />
+          <Form.Control.Feedback>
+            Please provide your requested time.
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="contactFormMessage">
+          {/* <Form.Label>Message / Requests</Form.Label> */}
+          <Form.Control
+            placeholder="Enter your message or requests"
+            as="textarea"
+            rows={3}
+            required
+          />
+          <Form.Control.Feedback type="invalid">
+            Please provide your message or requests.
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group className="mb-3" id="contactFormCheckbox">
+          <Form.Check
+            type="checkbox"
+            label="Yes, I would like to sign up for the Fearless Eater newsletter"
+          />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Send
+        </Button>
+      </Form>
+    </Container>
+  );
+};
+
+export default ContactForm;

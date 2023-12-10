@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // React Imports
 import { useState } from "react";
 // Bootstrap Imports
@@ -29,8 +30,32 @@ import Tabs from "react-bootstrap/Tabs";
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <Container id="about">
+      <Row>
+        <Col>
+          <Card className="text-white">
+            <Card.Img
+              src="assets\heroImage.jpg"
+              alt="The Fearless Eater hero"
+              style={{
+                height: 200,
+              }}
+            />
+          </Card>
+        </Col>
+        <Col>
+          <Card.Title>About</Card.Title>
+          <Card.Text>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
+            officia consequuntur corrupti velit nulla incidunt laudantium
+            quaerat hic, animi aperiam dignissimos nam doloremque ut excepturi
+            asperiores omnis tempora at, tempore, voluptas ipsum? Commodi labore
+            magni repellat, cum quam excepturi veritatis.
+          </Card.Text>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
-export default About
+export default About;

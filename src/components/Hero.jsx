@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // React Imports
 import { useState } from "react";
 // Bootstrap Imports
@@ -29,8 +30,29 @@ import Tabs from "react-bootstrap/Tabs";
 
 const Hero = () => {
   return (
-    <div>Hero</div>
-  )
-}
+    <Card className="text-white">
+      <Card.Img
+        src="assets\heroImage.jpg"
+        alt="The Fearless Eater hero"
+        style={{
+          height: 200,
+        }}
+      />
+      <Card.ImgOverlay>
+        <Card.Title>The Fearless Eater</Card.Title>
+        <Card.Text
+          style={{
+            display: "flex",
+            flexFlow: "column",
+            justifyContent: "flex-start",
+            alignItems: "center",
+          }}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </Card.Text>
+      </Card.ImgOverlay>
+    </Card>
+  );
+};
 
-export default Hero
+export default Hero;

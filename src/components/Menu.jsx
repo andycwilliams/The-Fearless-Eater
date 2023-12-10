@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // React Imports
 import { useState } from "react";
 // Bootstrap Imports
@@ -27,16 +28,55 @@ import Stack from "react-bootstrap/Stack";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 
+const menuItems = [
+  {
+    itemName: "Bread & Butter",
+    itemDescription: "homemade focaccia, clarified butter",
+    itemPrice: 10.75,
+  },
+  {
+    itemName: "Fried Cauliflower Bites",
+    itemDescription:
+      "Served with choice of ranch (V), Bleu cheese (VEG), or vegan buffalo (V)",
+    itemPrice: 14.37,
+  },
+  {
+    itemName: "Hummus Plate",
+    itemDescription: "Organic hummus with crudités",
+    itemPrice: 12.21,
+  },
+  {
+    itemName: "Mixed Greens",
+    itemDescription:
+      "white wine vinaigrette, local apples, hazelnuts, mint, blue cheese, saba",
+    itemPrice: 20,
+  },
+];
+
 const Menu = () => {
   return (
-    <Container>
+    <Container id="menu">
+      <Card.Title>Menu</Card.Title>
+      <Card.Title>Small Plates</Card.Title>
       <Row>
-        <Col>1 of 4</Col>
-        <Col>2 of 4</Col>
-      </Row>
-      <Row>
-        <Col>3 of 4</Col>
-        <Col>4 of 4</Col>
+        <Col>
+          <Card.Img
+            src="assets\heroImage.jpg"
+            alt="The Fearless Eater hero"
+            style={{
+              height: 150,
+              width: 150,
+            }}
+          />
+        </Col>
+        <Col>
+          {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
+            <div key={itemName}>
+              <Card.Title>{itemName}</Card.Title>
+              <Card.Text>{itemDescription + " " + itemPrice}</Card.Text>
+            </div>
+          ))}
+        </Col>
       </Row>
     </Container>
   );
