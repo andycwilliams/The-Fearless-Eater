@@ -34,27 +34,12 @@ import { About, ContactForm, Footer, Header, Hero, Menu } from "./components";
 
 function App() {
   return (
-    <Container
-    // className="p-3"
-    >
-      {/* Header */}
+    <Container className="p-1">
       <Header />
-
-      {/* Main */}
-
-      {/* Hero */}
       <Hero />
-
-      {/* About */}
       <About />
-
-      {/* Menu */}
       <Menu />
-
-      {/* Contact form */}
       <ContactForm />
-
-      {/* Footer */}
       <Footer />
     </Container>
   );

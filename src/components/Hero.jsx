@@ -35,19 +35,19 @@ const Hero = () => {
         src="assets\heroImage.jpg"
         alt="The Fearless Eater hero"
         style={{
-          height: 200,
+          height: 500,
         }}
       />
-      <Card.ImgOverlay>
+      <Card.ImgOverlay
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          // justifyContent: "flex-start",
+          alignItems: "center",
+        }}
+      >
         <Card.Title>The Fearless Eater</Card.Title>
-        <Card.Text
-          style={{
-            display: "flex",
-            flexFlow: "column",
-            justifyContent: "flex-start",
-            alignItems: "center",
-          }}
-        >
+        <Card.Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Card.Text>
       </Card.ImgOverlay>

@@ -31,7 +31,7 @@ import Tabs from "react-bootstrap/Tabs";
 const menuItems = [
   {
     itemName: "Bread & Butter",
-    itemDescription: "homemade focaccia, clarified butter",
+    itemDescription: "Homemade focaccia, clarified butter",
     itemPrice: 10.75,
   },
   {
@@ -48,7 +48,7 @@ const menuItems = [
   {
     itemName: "Mixed Greens",
     itemDescription:
-      "white wine vinaigrette, local apples, hazelnuts, mint, blue cheese, saba",
+      "Red wine vinaigrette, seasonal fruit, walnuts, blue cheese",
     itemPrice: 20,
   },
 ];
@@ -56,28 +56,32 @@ const menuItems = [
 const Menu = () => {
   return (
     <Container id="menu">
-      <Card.Title>Menu</Card.Title>
-      <Card.Title>Small Plates</Card.Title>
-      <Row>
-        <Col>
-          <Card.Img
-            src="assets\heroImage.jpg"
-            alt="The Fearless Eater hero"
-            style={{
-              height: 150,
-              width: 150,
-            }}
-          />
-        </Col>
-        <Col>
-          {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
-            <div key={itemName}>
-              <Card.Title>{itemName}</Card.Title>
-              <Card.Text>{itemDescription + " " + itemPrice}</Card.Text>
-            </div>
-          ))}
-        </Col>
-      </Row>
+
+        <Card.Title>Menu</Card.Title>
+        <Card.Title>Small Plates</Card.Title>
+        <Row>
+          <Col>
+            <Card.Img
+              src="assets\heroImage.jpg"
+              alt="The Fearless Eater hero"
+              style={{
+                height: 150,
+                width: 150,
+              }}
+            />
+          </Col>
+          <Col>
+            {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
+              <div key={itemName}>
+                <Card.Title>{itemName}</Card.Title>
+                <Card.Text>
+                  <small>{itemDescription + " " + itemPrice}</small>
+                </Card.Text>
+              </div>
+            ))}
+          </Col>
+        </Row>
+  
     </Container>
   );
 };

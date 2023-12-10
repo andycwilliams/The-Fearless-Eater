@@ -43,56 +43,39 @@ const ContactForm = () => {
   return (
     <Container id="contact">
       <Card.Title>Contact</Card.Title>
-      <Card.Text></Card.Text>
-      <Card.Text></Card.Text>
       <Card.Text>
         To reserve a time,...For questions or special restrictions...We will do
         our best to accommodate your needs.
       </Card.Text>
       <Card.Text>
-        You can contact us by phone 555-555-5555 or email PLACEHOLDER or send us
-        a message here:
+        You can contact us by phone 555-555-5555, email PLACEHOLDER, or send us
+        a message using this form:
       </Card.Text>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="contactFormName">
-          {/* <Form.Label>Name</Form.Label> */}
-          <Form.Control
-            type="password"
-            placeholder="Enter your name"
-            required
-          />
+          <Form.Control type="password" placeholder="Name" required />
           <Form.Control.Feedback type="invalid">
             Please provide your name.
           </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="contactFormEmail">
-          {/* <Form.Label>Email</Form.Label> */}
-          <Form.Control
-            type="email"
-            placeholder="Enter your email address"
-            required
-          />
+          <Form.Control type="email" placeholder="Email address" required />
           <Form.Control.Feedback type="invalid">
             Please provide an email address.
           </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="contactFormReservationTime">
-          {/* <Form.Label>Reservation time</Form.Label> */}
-          <Form.Control
-            placeholder="Enter your desired reservation time"
-            required
-          />
+          <Form.Control placeholder="Desired reservation time" required />
           <Form.Control.Feedback>
             Please provide your requested time.
           </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="contactFormMessage">
-          {/* <Form.Label>Message / Requests</Form.Label> */}
           <Form.Control
-            placeholder="Enter your message or requests"
+            placeholder="Message or requests"
             as="textarea"
             rows={3}
             required
@@ -112,6 +95,8 @@ const ContactForm = () => {
         <Button variant="primary" type="submit">
           Send
         </Button>
+
+        
       </Form>
     </Container>
   );
