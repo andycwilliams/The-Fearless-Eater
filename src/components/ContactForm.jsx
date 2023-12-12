@@ -27,21 +27,44 @@ import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+// emailjs Imports
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
+  const [showAlert, setShowAlert] = useState(true);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     const form = e.currentTarget;
+
     if (form.checkValidity() === false) {
       e.preventDefault();
       e.stopPropagation();
     }
     setValidated(true);
+
+    emailjs
+      .sendForm(
+        process.env.CONTACT_SERVICE,
+        process.env.CONTACT_FORM,
+        form.current,
+        process.env.YOUR_PUBLIC_KEY
+      )
+      .then((result) => {
+        console.log(result.text);
+      }, console.error());
+    e.target.reset();
+
+    // try {
+    //   await setShowAlert(true);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (
-    <Container className="mt-4 text-center" sm="true" id="contact">
+    <Container className="mt-4 px-5 text-center" sm={12} id="contact">
+      {/* <form></form> */}
       <Card.Title>Contact</Card.Title>
       <Card.Text>
         To reserve a time,...For questions or special restrictions...We will do
@@ -53,30 +76,41 @@ const ContactForm = () => {
       </Card.Text>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="contactFormName">
-          <Form.Control type="password" placeholder="Name" required />
+          <Form.Control
+            type="password"
+            placeholder="Name"
+            name="name"
+            required
+          />
           <Form.Control.Feedback type="invalid">
             Please provide your name.
           </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="contactFormEmail">
-          <Form.Control type="email" placeholder="Email address" required />
+          <Form.Control
+            type="email"
+            placeholder="Email address"
+            name="email"
+            required
+          />
           <Form.Control.Feedback type="invalid">
             Please provide an email address.
           </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="contactFormReservationTime">
-          <Form.Control placeholder="Desired reservation time" required />
-          <Form.Control.Feedback>
-            Please provide your requested time.
-          </Form.Control.Feedback>
+          <Form.Control
+            placeholder="Reserve a time (optional)"
+            name="reservation"
+          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="contactFormMessage">
           <Form.Control
             placeholder="Message or requests"
             as="textarea"
+            name="message"
             rows={3}
             required
           />
@@ -92,10 +126,35 @@ const ContactForm = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="rounded-pill">
           Send
         </Button>
       </Form>
+
+      {/* <Alert
+        variant={alertVariant}
+        className="border border-primary w-50 mx-auto "
+      >
+        <div>{message}</div>
+      </Alert> */}
+
+      {showAlert ? (
+        <Alert
+          variant={"success"}
+          className="border border-primary w-50 mx-auto "
+        >
+          <div>Message sent!</div>
+        </Alert>
+      ) : (
+        <Alert
+          variant={"danger"}
+          // style={{ width: "100%" }}
+        >
+          <Container>
+            There was an error sending your message. Please try again.
+          </Container>
+        </Alert>
+      )}
     </Container>
   );
 };

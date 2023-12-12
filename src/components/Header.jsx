@@ -49,38 +49,51 @@ const Header = () => {
         // justifyContent: "between",
       }}
     >
-      <Container
-      fluid
-      >
-        <Navbar.Brand href="#home">The Fearless Eater</Navbar.Brand>
+      <Container fluid>
+        <Navbar.Brand
+          href="#home"
+          className="justify-content-start flex-grow-1 ps-1"
+        >
+          The Fearless Eater
+        </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse
-          // className="justify-content-end flex-grow-1 pe-3"
-          className="justify-content-end"
+          className="justify-content-end flex-grow-1 pe-1"
+          // className="justify-content-end"
         >
           <Nav
           // className="me-auto"
           >
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#menu">Menu</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-            <Form.Check
-              className="m-2"
-              type="switch"
-              // variant="secondary"
-              id="light-mode-switch"
-              label={
-                darkMode ? (
-                  <img src="assets\moon.svg" alt="Moon icon" />
-                ) : (
-                  <img src="assets\sun.svg" alt="Sun icon" />
-                )
-              }
-              onClick={() => {
-                setDarkMode(!darkMode);
-              }}
-            />
+            <Nav.Item>
+              <Nav.Link href="#home">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#about">About</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#menu">Menu</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#contact">Contact</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Form.Check
+                className="m-2"
+                type="switch"
+                // variant="secondary"
+                id="light-mode-switch"
+                label={
+                  darkMode ? (
+                    <img src="assets\moon.svg" alt="Moon icon" />
+                  ) : (
+                    <img src="assets\sun.svg" alt="Sun icon" />
+                  )
+                }
+                onClick={() => {
+                  setDarkMode(!darkMode);
+                }}
+              />
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

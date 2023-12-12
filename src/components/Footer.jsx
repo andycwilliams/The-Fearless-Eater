@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 // React Imports
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // Bootstrap Imports
 import Alert from "react-bootstrap/Alert";
 import Badge from "react-bootstrap/Badge";
@@ -30,37 +30,93 @@ import Tabs from "react-bootstrap/Tabs";
 // Other Imports
 import dayjs from "dayjs";
 
+const Copyright = () => {
+  return (
+    <Row className="text-center text-muted mt-3">
+      <Col
+        className=""
+        sm={12}
+        // md={6}
+      >
+        {"Copyright ©" + dayjs().year() + "."}
+      </Col>
+      <Col
+        className=""
+        sm={12}
+        // md={6}
+      >
+        <a color="inherit" href="/">
+          The Fearless Eater
+        </a>
+      </Col>
+    </Row>
+  );
+};
+
 const Footer = () => {
+  const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        setShowScrollToTopButton(true);
+      } else {
+        setShowScrollToTopButton(false);
+      }
+    });
+  }, []);
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <Card.Footer
       className="bg-body-secondary"
       // style={{ backgroundColor: "text.primary" }}
     >
-      <Container className="mt-4" fluid="md">
+      <Container
+        className="mt-4"
+        // fluid="md"
+        fluid
+      >
         <Row>
-          <Col>
-            <Stack direction="vertical" gap={0}>
-              <div className="">
-                <b>Address</b>
-              </div>
+          <Col sm={12} md={3} className="text-center">
+            <div>
+              <b>Address</b>
+            </div>
+            <Stack
+              direction="vertical"
+              // gap={1}
+              // className="text-align-left"
+            >
               <div className="">123 Fake Street</div>
               <div className="">Chicago, IL 11111</div>
             </Stack>
           </Col>
-          <Col>
-            <Stack direction="vertical" gap={0}>
-              <div className="">
-                <b>Contact</b>
-              </div>
+          <Col sm={12} md={3} className="text-center">
+            <div className="">
+              <b>Contact</b>
+            </div>
+            <Stack
+              direction="vertical"
+              // gap={1}
+            >
               <div className="">Phone number: 555-555-5555</div>
               <div className="">Email: PLACEHOLDER</div>
             </Stack>
           </Col>
-          <Col>
-            <Stack direction="vertical" gap={0}>
-              <div className="">
-                <b>Hours</b>
-              </div>
+          <Col sm={12} md={3} className="text-center">
+            <div className="">
+              <b>Hours</b>
+            </div>
+            <Stack
+              direction="vertical"
+              // gap={1}
+            >
               <div className="">Sunday 4-9 PM</div>
               <div className="">Monday Closed</div>
               <div className="">Tuesday Closed</div>
@@ -70,52 +126,51 @@ const Footer = () => {
               <div className="">Saturday 5-6 PM</div>
             </Stack>
           </Col>
-          <Col>
+          <Col sm={12} md={3} className="text-center">
+            <div className="">
+              <b>Social media links</b>
+            </div>
             <Stack
               direction="vertical"
               // className="justify-content-center"
-              // gap={4}
+              // gap={1}
             >
-              <div className="">
-                <b>Social media links</b>
-              </div>
               <Stack
                 direction="horizontal"
                 className="justify-content-center"
-                gap={4}
+                gap={3}
               >
-                <img
-                  src="assets\facebook.svg"
-                  alt="Facebook icon"
-                  width="24"
-                  height="24"
-                />
-                <img
-                  src="assets\twitter-x.svg"
-                  alt="Twitter-X icon"
-                  width="24"
-                  height="24"
-                />
-                <img
-                  src="assets\instagram.svg"
-                  alt="Instagram icon"
-                  width="24"
-                  height="24"
-                />
+                <a href="/">
+                  <img
+                    src="assets\facebook.svg"
+                    alt="Facebook icon"
+                    width="24"
+                    height="24"
+                  />
+                </a>
+                <a href="/">
+                  <img
+                    src="assets\twitter-x.svg"
+                    alt="Twitter-X icon"
+                    width="24"
+                    height="24"
+                  />
+                </a>
+                <a href="/">
+                  <img
+                    src="assets\instagram.svg"
+                    alt="Instagram icon"
+                    width="24"
+                    height="24"
+                  />
+                </a>
               </Stack>
             </Stack>
           </Col>
         </Row>
-        <Row className="text-center text-muted">
-          <Col className="">
-            {"Copyright ©" + dayjs().year()}
-            <a color="inherit" href="/">
-              The Fearless Eater
-            </a>
-            {"."}
-          </Col>
-        </Row>
+        <Copyright />
       </Container>
+      {showScrollToTopButton && <div onClick={scrollToTop}></div>}
     </Card.Footer>
   );
 };

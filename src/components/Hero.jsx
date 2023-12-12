@@ -32,8 +32,11 @@ import imageTest from "./heroImage.jpg";
 
 const Hero = () => {
   return (
-    <div style={{ position: "relative" }}>
+    <div
+    // style={{ position: "relative" }}
+    >
       <div
+        // src="assets\heroImage.jpg"
         alt="The Fearless Eater hero section"
         style={{
           width: "100%",
@@ -49,7 +52,7 @@ const Hero = () => {
           // overflow: false,
           // margin: 0,
           // padding: 0,
-          boxSizing: "border-box",
+          // boxSizing: "border-box",
         }}
       />
       <Card.ImgOverlay
@@ -58,6 +61,8 @@ const Hero = () => {
           flexDirection: "column",
           justifyContent: "flex-end",
           alignItems: "flex-start",
+          // position: "static",
+          color: "#ffffff",
         }}
       >
         <Card.Title>The Fearless Eater</Card.Title>

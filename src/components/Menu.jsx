@@ -59,17 +59,7 @@ const Menu = () => {
       <Card.Title>Menu</Card.Title>
       <Card.Title>Small Plates</Card.Title>
       <Row>
-        <Col sm="true">
-          <Card.Img
-            src="assets\menuImage.jpeg"
-            alt="The Fearless Eater menu section"
-            style={{
-              height: 150,
-              width: 150,
-            }}
-          />
-        </Col>
-        <Col sm="true">
+        <Col sm={6}>
           {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
             <div key={itemName}>
               <Card.Title>{itemName}</Card.Title>
@@ -78,6 +68,16 @@ const Menu = () => {
               </Card.Text>
             </div>
           ))}
+        </Col>
+        <Col sm={6}>
+          <Card.Img
+            src="assets\menuImage.jpeg"
+            alt="The Fearless Eater menu section"
+            style={{
+              height: 150,
+              width: 150,
+            }}
+          />
         </Col>
       </Row>
     </Container>

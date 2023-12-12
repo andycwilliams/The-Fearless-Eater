@@ -36,34 +36,34 @@ const About = () => {
       // className="col-md-8"
       >
         <Col
-        // sm="true"
+          // sm="true"
+          sm={6}
         >
-          <>
-            <img
-              src="assets\aboutImage.jpeg"
-              alt="The Fearless Eater about section"
-              style={{
-                height: 200,
-                // backgroundSize: "cover",
-                // backgroundSize: "contain",
-                // backgroundPosition: "center",
-                // backgroundRepeat: "no-repeat",
-                // mx: "auto",
-                objectFit: "contain",
-                // maxWidth: "90%",
-                // height: '70px',
-                // mb: "15%",
-              }}
-            />
-          </>
+          <Image
+            src="assets\aboutImage.jpeg"
+            alt="The Fearless Eater about section"
+            style={{
+              // height: 200,
+              // backgroundSize: "cover",
+              // backgroundSize: "contain",
+              // backgroundPosition: "center",
+              // backgroundRepeat: "no-repeat",
+              // mx: "auto",
+              // objectFit: "contain",
+              // maxWidth: "90%",
+              // height: '70px',
+              // mb: "15%",
+            }}
+          />
         </Col>
         <Col
           // sm="true"
+          sm={6}
           style={{
-            display: "flex",
-            flexDirection: "column",
+            // display: "flex",
+            // flexDirection: "column",
             // justifyContent: "flex-start",
-            alignItems: "center",
+            // alignItems: "center",
           }}
         >
           <Card.Title>About</Card.Title>

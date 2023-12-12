@@ -33,7 +33,7 @@ import Tabs from "react-bootstrap/Tabs";
 import "./App.css";
 import { About, ContactForm, Footer, Header, Hero, Menu } from "./components";
 
-function App() {
+const App = () => {
   return (
     <div
       // className="p-1"
@@ -47,6 +47,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -4,6 +4,9 @@ Web page for a fictional small business.
 
 Uses React and Bootstrap. Features dark mode, emailjs.
 
+Some WIP styling courtesy of:
+https://github.com/bibeva/React-Bootstrap-Project-Corporate/
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Commits](https://img.shields.io/github/commit-activity/m/andycwilliams/The-Fearless-Eater)](https://github.com/andycwilliams/The-Fearless-Eater/commits/Master)
 ![Top Language](https://img.shields.io/github/languages/top/andycwilliams/The-Fearless-Eater)
