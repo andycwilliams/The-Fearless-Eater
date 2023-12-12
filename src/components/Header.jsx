@@ -34,31 +34,56 @@ const Header = () => {
 
   return (
     <Navbar
-      // expand="lg"
-      className="bg-body-primary justify-content-between"
+      expand="md"
+      // className="bg-body-primary"
+      // className="bg-body-primary justify-content-between"
       // bg="dark"
       // bg="primary"
       // data-bs-theme="dark"
+      sticky="top"
+      collapseOnSelect
+      // className="bg-body-tertiary justify-content-between"
+      style={{
+        backgroundColor: "white",
+        // display: "flex",
+        // justifyContent: "between",
+      }}
     >
-      {/* <Container> */}
-      <Navbar.Brand href="/">The Fearless Eater</Navbar.Brand>
-      <Nav>
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#about">About</Nav.Link>
-        <Nav.Link href="#menu">Menu</Nav.Link>
-        <Nav.Link href="#contact">Contact</Nav.Link>
-        <Form.Check
-          // className="mb-2"
-          type="switch"
-          // variant="secondary"
-          id="light-and-dark-mode-switch"
-          label={darkMode ? "Dark" : "Light"}
-          onClick={() => {
-            setDarkMode(!darkMode);
-          }}
-        />
-      </Nav>
-      {/* </Container> */}
+      <Container
+      fluid
+      >
+        <Navbar.Brand href="#home">The Fearless Eater</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse
+          // className="justify-content-end flex-grow-1 pe-3"
+          className="justify-content-end"
+        >
+          <Nav
+          // className="me-auto"
+          >
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#menu">Menu</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Form.Check
+              className="m-2"
+              type="switch"
+              // variant="secondary"
+              id="light-mode-switch"
+              label={
+                darkMode ? (
+                  <img src="assets\moon.svg" alt="Moon icon" />
+                ) : (
+                  <img src="assets\sun.svg" alt="Sun icon" />
+                )
+              }
+              onClick={() => {
+                setDarkMode(!darkMode);
+              }}
+            />
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 };

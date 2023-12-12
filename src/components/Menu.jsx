@@ -55,33 +55,31 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <Container id="menu">
-
-        <Card.Title>Menu</Card.Title>
-        <Card.Title>Small Plates</Card.Title>
-        <Row>
-          <Col>
-            <Card.Img
-              src="assets\heroImage.jpg"
-              alt="The Fearless Eater hero"
-              style={{
-                height: 150,
-                width: 150,
-              }}
-            />
-          </Col>
-          <Col>
-            {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
-              <div key={itemName}>
-                <Card.Title>{itemName}</Card.Title>
-                <Card.Text>
-                  <small>{itemDescription + " " + itemPrice}</small>
-                </Card.Text>
-              </div>
-            ))}
-          </Col>
-        </Row>
-  
+    <Container className="mt-4" id="menu">
+      <Card.Title>Menu</Card.Title>
+      <Card.Title>Small Plates</Card.Title>
+      <Row>
+        <Col sm="true">
+          <Card.Img
+            src="assets\menuImage.jpeg"
+            alt="The Fearless Eater menu section"
+            style={{
+              height: 150,
+              width: 150,
+            }}
+          />
+        </Col>
+        <Col sm="true">
+          {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
+            <div key={itemName}>
+              <Card.Title>{itemName}</Card.Title>
+              <Card.Text>
+                <small>{itemDescription + " " + itemPrice}</small>
+              </Card.Text>
+            </div>
+          ))}
+        </Col>
+      </Row>
     </Container>
   );
 };

@@ -34,7 +34,10 @@ import { About, ContactForm, Footer, Header, Hero, Menu } from "./components";
 
 function App() {
   return (
-    <Container className="p-1">
+    <Container
+      // className="p-1"
+      id="home"
+    >
       <Header />
       <Hero />
       <About />

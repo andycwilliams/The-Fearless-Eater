@@ -30,20 +30,30 @@ import Tabs from "react-bootstrap/Tabs";
 
 const Hero = () => {
   return (
-    <Card className="text-white">
-      <Card.Img
+    <>
+      <img
         src="assets\heroImage.jpg"
-        alt="The Fearless Eater hero"
+        alt="The Fearless Eater hero section"
         style={{
-          height: 500,
+          // width: "100%",
+          // height: "500px",
+          // backgroundPosition: "50% 50%",
+          // backgroundSize: "auto",
+          // backgroundAttachment: "fixed",
+          // backgroundPosition: "center",
+          // backgroundRepeat: "no-repeat",
+          // backgroundRepeat: "none",
+          // backgroundSize: "cover",
+          // position: "relative",
         }}
       />
+      <br /> <br /> <br /> <br /> <br />
       <Card.ImgOverlay
         style={{
           display: "flex",
           flexDirection: "column",
-          // justifyContent: "flex-start",
-          alignItems: "center",
+          justifyContent: "flex-end",
+          alignItems: "flex-start",
         }}
       >
         <Card.Title>The Fearless Eater</Card.Title>
@@ -51,7 +61,7 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Card.Text>
       </Card.ImgOverlay>
-    </Card>
+    </>
   );
 };
 

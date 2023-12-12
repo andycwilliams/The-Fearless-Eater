@@ -41,7 +41,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Container id="contact">
+    <Container className="mt-4 text-center" sm="true" id="contact">
       <Card.Title>Contact</Card.Title>
       <Card.Text>
         To reserve a time,...For questions or special restrictions...We will do
@@ -95,8 +95,6 @@ const ContactForm = () => {
         <Button variant="primary" type="submit">
           Send
         </Button>
-
-        
       </Form>
     </Container>
   );
