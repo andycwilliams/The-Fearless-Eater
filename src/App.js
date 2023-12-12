@@ -30,11 +30,12 @@ import Tabs from "react-bootstrap/Tabs";
 // React Router Bootstrap Imports
 // import { LinkContainer } from 'react-router-bootstrap';
 // Custom Imports
+import "./App.css";
 import { About, ContactForm, Footer, Header, Hero, Menu } from "./components";
 
 function App() {
   return (
-    <Container
+    <div
       // className="p-1"
       id="home"
     >
@@ -44,7 +45,7 @@ function App() {
       <Menu />
       <ContactForm />
       <Footer />
-    </Container>
+    </div>
   );
 }
 

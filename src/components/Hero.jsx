@@ -28,26 +28,30 @@ import Stack from "react-bootstrap/Stack";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 
+import imageTest from "./heroImage.jpg";
+
 const Hero = () => {
   return (
-    <>
-      <img
-        src="assets\heroImage.jpg"
+    <div style={{ position: "relative" }}>
+      <div
         alt="The Fearless Eater hero section"
         style={{
-          // width: "100%",
-          // height: "500px",
-          // backgroundPosition: "50% 50%",
-          // backgroundSize: "auto",
-          // backgroundAttachment: "fixed",
-          // backgroundPosition: "center",
-          // backgroundRepeat: "no-repeat",
-          // backgroundRepeat: "none",
-          // backgroundSize: "cover",
-          // position: "relative",
+          width: "100%",
+          // maxWidth: "100%",
+          // height: "208px",
+          // backgroundImage: "url(assets/heroImage.jpg) no-repeat left -10px",
+          backgroundImage: `url("${imageTest}")`,
+          height: "100vh",
+          // marginTop: "-70px",
+          // fontSize: "50px",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          // overflow: false,
+          // margin: 0,
+          // padding: 0,
+          boxSizing: "border-box",
         }}
       />
-      <br /> <br /> <br /> <br /> <br />
       <Card.ImgOverlay
         style={{
           display: "flex",
@@ -61,7 +65,7 @@ const Hero = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Card.Text>
       </Card.ImgOverlay>
-    </>
+    </div>
   );
 };
 

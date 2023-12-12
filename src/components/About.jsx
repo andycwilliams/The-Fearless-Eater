@@ -35,12 +35,11 @@ const About = () => {
       <Row
       // className="col-md-8"
       >
-        <Col sm="true">
-          <Card
-            className="text-white"
-            // style={{ width: "18rem" }}
-          >
-            <Card.Img
+        <Col
+        // sm="true"
+        >
+          <>
+            <img
               src="assets\aboutImage.jpeg"
               alt="The Fearless Eater about section"
               style={{
@@ -56,10 +55,10 @@ const About = () => {
                 // mb: "15%",
               }}
             />
-          </Card>
+          </>
         </Col>
         <Col
-          sm="true"
+          // sm="true"
           style={{
             display: "flex",
             flexDirection: "column",
