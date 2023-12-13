@@ -32,21 +32,23 @@ import ToggleButton from "react-bootstrap/ToggleButton";
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
 
+  const toggleDarkMode = () => {};
+
   return (
     <Navbar
       expand="md"
+      sticky="top"
+      collapseOnSelect
       // className="bg-body-primary"
       // className="bg-body-primary justify-content-between"
       // bg="dark"
       // bg="primary"
       // data-bs-theme="dark"
-      sticky="top"
-      collapseOnSelect
-      // className="bg-body-tertiary justify-content-between"
       style={{
-        backgroundColor: "white",
+        backgroundColor: "#ffffff",
         // display: "flex",
         // justifyContent: "between",
+        borderBottom: "1px solid #000000",
       }}
     >
       <Container fluid>
@@ -89,9 +91,10 @@ const Header = () => {
                     <img src="assets\sun.svg" alt="Sun icon" />
                   )
                 }
-                onClick={() => {
-                  setDarkMode(!darkMode);
-                }}
+                // onClick={() => {
+                //   setDarkMode(!darkMode);
+                // }}
+                onChange={toggleDarkMode}
               />
             </Nav.Item>
           </Nav>

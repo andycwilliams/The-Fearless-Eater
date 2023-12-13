@@ -30,9 +30,26 @@ import Tabs from "react-bootstrap/Tabs";
 // Other Imports
 import dayjs from "dayjs";
 
+const BusinessHours = () => {
+  return (
+    <Stack
+      direction="vertical"
+      // gap={1}
+    >
+      <div className="">Sunday 4pm-9pm</div>
+      <div className="">Monday Closed</div>
+      <div className="">Tuesday Closed</div>
+      <div className="">Wednesday 4pm-9pm</div>
+      <div className="">Thursday 4pm-9pm</div>
+      <div className="">Friday 4pm-9pm</div>
+      <div className="">Saturday 5pm-6pm</div>
+    </Stack>
+  );
+};
+
 const Copyright = () => {
   return (
-    <Row className="text-center text-muted mt-3">
+    <Row className="text-center text-muted my-2">
       <Col
         className=""
         sm={12}
@@ -66,28 +83,28 @@ const Footer = () => {
     });
   }, []);
 
-  function scrollToTop() {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-  }
+  };
 
   return (
     <Card.Footer
-      className="bg-body-secondary"
-      // style={{ backgroundColor: "text.primary" }}
+      className="bg-body-tertiary"
+      style={{ borderTop: "1px solid #000000" }}
     >
       <Container
-        className="mt-4"
+        className="mt-3 pt-3"
         // fluid="md"
         fluid
       >
         <Row>
           <Col sm={12} md={3} className="text-center">
-            <div>
+            <h5 component="h3">
               <b>Address</b>
-            </div>
+            </h5>
             <Stack
               direction="vertical"
               // gap={1}
@@ -98,38 +115,31 @@ const Footer = () => {
             </Stack>
           </Col>
           <Col sm={12} md={3} className="text-center">
-            <div className="">
+            <h5 component="h3">
               <b>Contact</b>
-            </div>
+            </h5>
             <Stack
               direction="vertical"
               // gap={1}
             >
-              <div className="">Phone number: 555-555-5555</div>
-              <div className="">Email: PLACEHOLDER</div>
+              <div className="">
+                <b>Phone number:</b> 555-555-5555
+              </div>
+              <div className="">
+                <b>Email:</b> PLACEHOLDER
+              </div>
             </Stack>
           </Col>
           <Col sm={12} md={3} className="text-center">
-            <div className="">
+            <h5 component="h3">
               <b>Hours</b>
-            </div>
-            <Stack
-              direction="vertical"
-              // gap={1}
-            >
-              <div className="">Sunday 4-9 PM</div>
-              <div className="">Monday Closed</div>
-              <div className="">Tuesday Closed</div>
-              <div className="">Wednesday 4-9 PM</div>
-              <div className="">Thursday 4-9 PM</div>
-              <div className="">Friday 4-9 PM</div>
-              <div className="">Saturday 5-6 PM</div>
-            </Stack>
+            </h5>
+            <BusinessHours />
           </Col>
           <Col sm={12} md={3} className="text-center">
-            <div className="">
-              <b>Social media links</b>
-            </div>
+            <h5 component="h3">
+              <b>Follow Us</b>
+            </h5>
             <Stack
               direction="vertical"
               // className="justify-content-center"

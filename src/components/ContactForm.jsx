@@ -36,9 +36,9 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     const form = e.currentTarget;
+    e.preventDefault();
 
     if (form.checkValidity() === false) {
-      e.preventDefault();
       e.stopPropagation();
     }
     setValidated(true);
@@ -55,33 +55,39 @@ const ContactForm = () => {
       }, console.error());
     e.target.reset();
 
-    // try {
-    //   await setShowAlert(true);
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      await setShowAlert(true);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 2000);
+    }
   };
 
   return (
-    <Container className="mt-4 px-5 text-center" sm={12} id="contact">
-      {/* <form></form> */}
-      <Card.Title>Contact</Card.Title>
+    <Container
+      // className="mt-5 px-5"
+      // sm={12}
+      // fluid
+      id="contact"
+      style={{ maxWidth: "1000px" }}
+    >
+      <Card.Title className="text-center">
+        <h2>Contact</h2>
+      </Card.Title>
       <Card.Text>
-        To reserve a time,...For questions or special restrictions...We will do
-        our best to accommodate your needs.
+        Contact us to reserve a time, add dietary restrictions, or simply to ask
+        question. We do our best to accommodate all needs.
       </Card.Text>
       <Card.Text>
-        You can contact us by phone 555-555-5555, email PLACEHOLDER, or send us
-        a message using this form:
+        You can reach us by phone 555-555-5555, by email PLACEHOLDER, or simply
+        send us a message using this form:
       </Card.Text>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="contactFormName">
-          <Form.Control
-            type="password"
-            placeholder="Name"
-            name="name"
-            required
-          />
+        <Form.Group className="mb-3" controlId="contactFormName" md={6}>
+          <Form.Control type="name" placeholder="Name" name="name" required />
           <Form.Control.Feedback type="invalid">
             Please provide your name.
           </Form.Control.Feedback>
@@ -126,7 +132,12 @@ const ContactForm = () => {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit" className="rounded-pill">
+        <Button
+          variant="primary"
+          type="submit"
+          className="rounded-pill"
+          style={{ minWidth: "100px" }}
+        >
           Send
         </Button>
       </Form>
@@ -141,7 +152,8 @@ const ContactForm = () => {
       {showAlert ? (
         <Alert
           variant={"success"}
-          className="border border-primary w-50 mx-auto "
+          className="border border-dark mx-auto "
+          style={{ width: "12rem" }}
         >
           <div>Message sent!</div>
         </Alert>
