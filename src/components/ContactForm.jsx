@@ -68,10 +68,11 @@ const ContactForm = () => {
 
   return (
     <Container
+      className="pageSection"
+      id="contact"
       // className="mt-5 px-5"
       // sm={12}
       // fluid
-      id="contact"
       style={{ maxWidth: "1000px" }}
     >
       <Card.Title className="text-center">

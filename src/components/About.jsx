@@ -30,7 +30,7 @@ import Tabs from "react-bootstrap/Tabs";
 
 const About = () => {
   return (
-    <Container className="mt-5" id="about" fluid>
+    <Container className="pageSection" id="about" fluid>
       {/* <Fade in> */}
       <Row
       // className="col-md-8"

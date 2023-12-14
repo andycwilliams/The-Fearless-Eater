@@ -92,7 +92,7 @@ const Footer = () => {
 
   return (
     <Card.Footer
-      className="bg-body-tertiary"
+      className="pageSection bg-body-tertiary"
       style={{ borderTop: "1px solid #000000" }}
     >
       <Container

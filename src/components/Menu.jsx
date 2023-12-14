@@ -55,7 +55,7 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <Container className="mt-5" id="menu">
+    <Container className="pageSection" id="menu">
       <Row>
         <Col sm={6} className="p-3">
           <Card.Title className="text-center">

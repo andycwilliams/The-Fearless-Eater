@@ -1,19 +1,14 @@
 /* Some WIP styling courtesy of: https://github.com/bibeva/React-Bootstrap-Project-Corporate/ */
 
 html {
-  /* box-sizing: border-box; */
-  /* background-color: lightgreen; */
+  box-sizing: border-box;
 }
 
-#home {
-  /* box-sizing: border-box; */
-}
-
-/* *,
+*,
 *:before,
 *:after {
   box-sizing: inherit;
-} */
+}
 
 body {
   /* text-align: left; */
@@ -23,8 +18,13 @@ body {
 
 img {
   max-width: 100%;
-  /* height: auto; */
-  /* vertical-align: top; */
+  height: auto;
+  vertical-align: top;
+}
+
+.pageSection {
+  margin: "100px";
+  background-color: "red";
 }
 
 /* .heroSectionBG {
@@ -42,17 +42,17 @@ img {
   left: "64px";
 } */
 
-/* a {
+a {
   color: #f64b4b;
   text-decoration: none;
   transition: color 0.3s ease;
-} */
+}
 
-/* a:hover,
+a:hover,
 a:focus {
   text-decoration: none;
   color: #f41a1a;
-} */
+}
 
 /* .go-top {
   width: 50px;
