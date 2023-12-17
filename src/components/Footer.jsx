@@ -49,7 +49,7 @@ const BusinessHours = () => {
 
 const Copyright = () => {
   return (
-    <Row className="text-center text-muted my-2">
+    <Row className="text-center text-muted mb-3">
       <Col
         className=""
         sm={12}
@@ -109,6 +109,7 @@ const Footer = () => {
               direction="vertical"
               // gap={1}
               // className="text-align-left"
+              className="mb-3"
             >
               <div className="">123 Fake Street</div>
               <div className="">Chicago, IL 11111</div>
@@ -121,6 +122,7 @@ const Footer = () => {
             <Stack
               direction="vertical"
               // gap={1}
+              className="mb-3"
             >
               <div className="">
                 <b>Phone number:</b> 555-555-5555
@@ -130,7 +132,7 @@ const Footer = () => {
               </div>
             </Stack>
           </Col>
-          <Col sm={12} md={3} className="text-center">
+          <Col sm={12} md={3} className="text-center mb-3">
             <h5 component="h3">
               <b>Hours</b>
             </h5>

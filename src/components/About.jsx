@@ -42,21 +42,20 @@ const About = () => {
           <Image
             src="assets\aboutImage.jpeg"
             alt="The Fearless Eater about section"
-            style={
-              {
-                // height: 200,
-                // backgroundSize: "cover",
-                // backgroundSize: "contain",
-                // backgroundPosition: "center",
-                // backgroundRepeat: "no-repeat",
-                // mx: "auto",
-                // objectFit: "contain",
-                // maxWidth: "90%",
-                // height: '70px',
-                // mb: "15%",
-                // padding: 50,
-              }
-            }
+            style={{
+              // height: 200,
+              // backgroundSize: "cover",
+              // backgroundSize: "contain",
+              // backgroundPosition: "center",
+              // backgroundRepeat: "no-repeat",
+              // mx: "auto",
+              // objectFit: "contain",
+              // maxWidth: "90%",
+              // height: '70px',
+              // mb: "15%",
+              // padding: 50,
+              borderRadius: "5px",
+            }}
           />
         </Col>
         <Col

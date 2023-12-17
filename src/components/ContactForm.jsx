@@ -62,7 +62,7 @@ const ContactForm = () => {
     } finally {
       setTimeout(() => {
         setShowAlert(false);
-      }, 2000);
+      }, 500);
     }
   };
 

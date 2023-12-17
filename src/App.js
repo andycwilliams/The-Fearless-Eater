@@ -6,7 +6,7 @@
 import "./App.css";
 import { About, ContactForm, Footer, Header, Hero, Menu } from "./components";
 
-import "../scss/custom.scss";
+// import "../scss/custom.scss";
 
 const App = () => {
   return (

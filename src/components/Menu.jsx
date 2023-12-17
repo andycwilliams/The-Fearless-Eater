@@ -77,13 +77,12 @@ const Menu = () => {
           <Card.Img
             src="assets\menuImage.jpeg"
             alt="The Fearless Eater menu section"
-            style={
-              {
-                // height: 150,
-                // width: 150,
-                // padding: 50,
-              }
-            }
+            style={{
+              // height: 150,
+              // width: 150,
+              // padding: 50,
+              borderRadius: "5px",
+            }}
           />
         </Col>
       </Row>
