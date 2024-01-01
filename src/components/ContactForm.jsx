@@ -31,6 +31,8 @@ import Tabs from "react-bootstrap/Tabs";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+  const [messageSuccess, setMessageSuccess] = useState(false);
+  const [messageFailure, setMessageFailure] = useState(false);
   const [validated, setValidated] = useState(false);
   const [showAlert, setShowAlert] = useState(true);
 
@@ -59,10 +61,12 @@ const ContactForm = () => {
       await setShowAlert(true);
     } catch (error) {
       console.log(error);
+      setMessageFailure(true);
     } finally {
       setTimeout(() => {
         setShowAlert(false);
-      }, 500);
+        setMessageSuccess(true);
+      }, 1000);
     }
   };
 
@@ -150,7 +154,7 @@ const ContactForm = () => {
         <div>{message}</div>
       </Alert> */}
 
-      {showAlert ? (
+      {/* {showAlert ? (
         <Alert
           variant={"success"}
           className="border border-dark mx-auto "
@@ -161,13 +165,22 @@ const ContactForm = () => {
       ) : (
         <Alert
           variant={"danger"}
-          // style={{ width: "100%" }}
+          style={{ width: "100%" }}
         >
           <Container>
             There was an error sending your message. Please try again.
           </Container>
         </Alert>
-      )}
+      )} */}
+
+      {messageSuccess ? (
+        <Alert variant="success">Your message was successfully sent!</Alert>
+      ) : null}
+      {messageFailure ? (
+        <Alert variant={"danger"}>
+          There was an error. Please try an again.
+        </Alert>
+      ) : null}
     </Container>
   );
 };
