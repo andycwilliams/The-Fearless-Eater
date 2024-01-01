@@ -66,7 +66,7 @@ const Header = () => {
           <Nav
           // className="me-auto"
           >
-            <Nav.Item>
+            <Nav.Item className="navButton">
               <Nav.Link href="#home">Home</Nav.Link>
             </Nav.Item>
             <Nav.Item>

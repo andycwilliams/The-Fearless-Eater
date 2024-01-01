@@ -73,7 +73,7 @@ const ContactForm = () => {
       // className="mt-5 px-5"
       // sm={12}
       // fluid
-      style={{ maxWidth: "1000px" }}
+      style={{ maxWidth: "750px" }}
     >
       <Card.Title className="text-center">
         <h2>Contact</h2>

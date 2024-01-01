@@ -36,7 +36,7 @@ const BusinessHours = () => {
       direction="vertical"
       // gap={1}
     >
-      <div className="">Sunday 4pm-9pm</div>
+      <small className="">Sunday 4pm-9pm</small>
       <div className="">Monday Closed</div>
       <div className="">Tuesday Closed</div>
       <div className="">Wednesday 4pm-9pm</div>

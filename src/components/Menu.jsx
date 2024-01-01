@@ -55,35 +55,55 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <Container className="pageSection" id="menu">
+    <Container
+      className="pageSection p-3"
+      id="menu"
+      style={
+        {
+          // display: "flex",
+          // flexDirection: "column",
+          // justifyContent: "flex-start",
+          // alignItems: "center",
+        }
+      }
+    >
       <Row>
-        <Col sm={6} className="p-3">
-          <Card.Title className="text-center">
-            <h2>Menu</h2>
-          </Card.Title>
-          <Card.Title className="text-center">
-            <div>Small Plates</div>
-          </Card.Title>
-          {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
-            <div key={itemName} style={{ padding: 10 }}>
-              <Card.Title>{itemName}</Card.Title>
-              <Card.Text>
-                <small>{itemDescription + " " + itemPrice}</small>
-              </Card.Text>
-            </div>
-          ))}
+        <Col
+          sm={6}
+          // className="p-3"
+        >
+          <Card>
+            <Card.Title className="text-center">
+              <h2>Menu</h2>
+            </Card.Title>
+            <Card.Text className="text-center">Small Plates</Card.Text>
+            {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
+              <div key={itemName} style={{ padding: 10 }}>
+                <Card.Title>{itemName}</Card.Title>
+                <Card.Text>
+                  <small>{itemDescription + " " + itemPrice}</small>
+                </Card.Text>
+              </div>
+            ))}
+          </Card>
         </Col>
         <Col sm={6}>
-          <Card.Img
-            src="assets\menuImage.jpeg"
-            alt="The Fearless Eater menu section"
-            style={{
-              // height: 150,
-              // width: 150,
-              // padding: 50,
-              borderRadius: "5px",
-            }}
-          />
+          <Card>
+            <Card.Img
+              src="assets\menuImage.jpeg"
+              alt="The Fearless Eater menu section"
+              style={{
+                // height: 150,
+                // width: 150,
+                // padding: 50,
+                // display: "flex",
+                // flexDirection: "column",
+                // justifyContent: "flex-start",
+                // alignItems: "center",
+                borderRadius: "5px",
+              }}
+            />
+          </Card>
         </Col>
       </Row>
     </Container>
