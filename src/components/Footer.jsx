@@ -37,19 +37,19 @@ const BusinessHours = () => {
       // gap={1}
     >
       <small className="">Sunday 4pm-9pm</small>
-      <div className="">Monday Closed</div>
-      <div className="">Tuesday Closed</div>
-      <div className="">Wednesday 4pm-9pm</div>
-      <div className="">Thursday 4pm-9pm</div>
-      <div className="">Friday 4pm-9pm</div>
-      <div className="">Saturday 5pm-6pm</div>
+      <small className="">Monday Closed</small>
+      <small className="">Tuesday Closed</small>
+      <small className="">Wednesday 4pm-9pm</small>
+      <small className="">Thursday 4pm-9pm</small>
+      <small className="">Friday 4pm-9pm</small>
+      <small className="">Saturday 5pm-6pm</small>
     </Stack>
   );
 };
 
 const Copyright = () => {
   return (
-    <Row className="text-center text-muted mb-3">
+    <Row className="text-center text-muted my-3">
       <Col
         className=""
         sm={12}
@@ -101,7 +101,7 @@ const Footer = () => {
         fluid
       >
         <Row>
-          <Col sm={12} md={3} className="text-center">
+          <Col xs={12} sm={6} md={3} className="text-center">
             <h5 component="h3">
               <b>Address</b>
             </h5>
@@ -111,11 +111,11 @@ const Footer = () => {
               // className="text-align-left"
               className="mb-3"
             >
-              <div className="">123 Fake Street</div>
-              <div className="">Chicago, IL 11111</div>
+              <small className="">123 Fake Street</small>
+              <small className="">Chicago, IL 11111</small>
             </Stack>
           </Col>
-          <Col sm={12} md={3} className="text-center">
+          <Col xs={12} sm={6} md={3} className="text-center">
             <h5 component="h3">
               <b>Contact</b>
             </h5>
@@ -124,21 +124,21 @@ const Footer = () => {
               // gap={1}
               className="mb-3"
             >
-              <div className="">
-                <b>Phone number:</b> 555-555-5555
-              </div>
-              <div className="">
-                <b>Email:</b> PLACEHOLDER
-              </div>
+              <small className="">
+                <b>Phone number:</b> (555) 555-5555
+              </small>
+              <small className="">
+                <b>Email:</b> example@address.com
+              </small>
             </Stack>
           </Col>
-          <Col sm={12} md={3} className="text-center mb-3">
+          <Col xs={12} sm={6} md={3} className="text-center">
             <h5 component="h3">
               <b>Hours</b>
             </h5>
             <BusinessHours />
           </Col>
-          <Col sm={12} md={3} className="text-center">
+          <Col xs={12} sm={6} md={3} className="text-center">
             <h5 component="h3">
               <b>Follow Us</b>
             </h5>
@@ -182,7 +182,7 @@ const Footer = () => {
         </Row>
         <Copyright />
       </Container>
-      {showScrollToTopButton && <div onClick={scrollToTop}></div>}
+      {showScrollToTopButton && <small onClick={scrollToTop}></small>}
     </Card.Footer>
   );
 };

@@ -7,6 +7,7 @@ import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import Card from "react-bootstrap/Card";
+import CardGroup from "react-bootstrap/CardGroup";
 import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Collapse from "react-bootstrap/Collapse";
@@ -30,14 +31,14 @@ import Tabs from "react-bootstrap/Tabs";
 
 const About = () => {
   return (
-    <Container className="pageSection p-3" id="about" fluid>
+    <Container className="pageSection p-3" id="about">
       {/* <Fade in> */}
       <Row
       // className="col-md-8"
       >
         <Col
           // sm="true"
-          sm={6}
+          md={6}
           // className="p-3"
         >
           <Card>
@@ -58,13 +59,15 @@ const About = () => {
                 // padding: 50,
                 // margin: "20 20 20 20",
                 borderRadius: "5px",
+                boxShadow: "0 5px 5px 0 rgba(0, 0, 0, 0.2)",
               }}
+              fluid
             />
           </Card>
         </Col>
         <Col
           // sm="true"
-          sm={6}
+          md={6}
           // className="p-3"
           style={
             {

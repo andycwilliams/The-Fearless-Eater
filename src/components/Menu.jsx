@@ -51,6 +51,21 @@ const menuItems = [
       "Red wine vinaigrette, seasonal fruit, walnuts, blue cheese",
     itemPrice: 20,
   },
+  {
+    itemName: "item",
+    itemDescription: "description",
+    itemPrice: 400,
+  },
+  {
+    itemName: "item",
+    itemDescription: "description",
+    itemPrice: 400,
+  },
+  {
+    itemName: "item",
+    itemDescription: "description",
+    itemPrice: 400,
+  },
 ];
 
 const Menu = () => {
@@ -69,7 +84,7 @@ const Menu = () => {
     >
       <Row>
         <Col
-          sm={6}
+          md={6}
           // className="p-3"
         >
           <Card>
@@ -78,7 +93,10 @@ const Menu = () => {
             </Card.Title>
             <Card.Text className="text-center">Small Plates</Card.Text>
             {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
-              <div key={itemName} style={{ padding: 10 }}>
+              <div
+                key={itemName}
+                // style={{ padding: 10 }}
+              >
                 <Card.Title>{itemName}</Card.Title>
                 <Card.Text>
                   <small>{itemDescription + " " + itemPrice}</small>
@@ -87,7 +105,7 @@ const Menu = () => {
             ))}
           </Card>
         </Col>
-        <Col sm={6}>
+        <Col md={6}>
           <Card>
             <Card.Img
               src="assets\menuImage.jpeg"
@@ -101,6 +119,7 @@ const Menu = () => {
                 // justifyContent: "flex-start",
                 // alignItems: "center",
                 borderRadius: "5px",
+                boxShadow: "0 5px 5px 0 rgba(0, 0, 0, 0.2)",
               }}
             />
           </Card>

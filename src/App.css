@@ -10,17 +10,17 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  /* text-align: left; */
-  /* padding: 0; */
-  /* margin: 0; */
-}
+/* body { */
+/* text-align: left; */
+/* padding: 0; */
+/* margin: 0; */
+/* } */
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
   /* height: auto; */
   /* vertical-align: top; */
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2); */
   /* padding: 5 5 5 5; */
   /* margin: 5; */
 }
@@ -99,8 +99,9 @@ img {
   }
 } */
 
+/* 
 @media only screen and (max-width: 600px) {
   * {
-    /* text-align: center; */
+    text-align: center;
   }
-}
+} */
