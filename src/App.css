@@ -1,5 +1,9 @@
 /* Some WIP styling courtesy of: https://github.com/bibeva/React-Bootstrap-Project-Corporate/ */
 
+* {
+  font-family: Georgia, Garamond, "Times New Roman", serif;
+}
+
 html {
   box-sizing: border-box;
 }

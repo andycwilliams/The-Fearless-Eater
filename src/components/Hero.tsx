@@ -6,7 +6,7 @@ const Hero = () => {
     // style={{ position: "relative" }}
     >
       <div
-        alt="The Fearless Eater hero section"
+        aria-label="The Fearless Eater hero section"
         className="heroSectionBG"
         style={{
           width: "100%",

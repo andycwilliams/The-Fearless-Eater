@@ -54,7 +54,7 @@ const Header = () => {
       <Container fluid>
         <Navbar.Brand
           href="#home"
-          className="justify-content-start flex-grow-1 ps-1"
+          className="justify-content-start flex-grow-1 ps-1 fs-4"
         >
           The Fearless Eater
         </Navbar.Brand>
