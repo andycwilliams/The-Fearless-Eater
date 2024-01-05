@@ -58,23 +58,32 @@ const Accolades = () => {
       // fluid
     >
       <Card.Title className="text-center fs-2">Accolades</Card.Title>
-      <Stack direction="horizontal" gap={5}>
+      <Card.Text className="text-center ">
+        See some of our awards and recognition.
+      </Card.Text>
+      <Row className="mt-3">
         {accoladesList.map(({ image, title, description }, idx) => (
-          <Card className="p-2" key={idx}>
-            <Card.Img
-              // variant="top"
-              src={image}
-              width="140"
-              height="140"
-              alt=""
-            />
-            <Card.Body>
-              <Card.Title>{title}</Card.Title>
-              <Card.Text>{description}</Card.Text>
-            </Card.Body>
-          </Card>
+          <Col key={idx} xs={12} sm={6} md={4} gap={1}>
+            <Card
+              className="text-center p-2"
+              key={idx}
+              style={{ borderRadius: "5%" }}
+            >
+              <Card.Img
+                // variant="top"
+                src={image}
+                width="140"
+                height="140"
+                alt=""
+              />
+              <Card.Body>
+                <Card.Title>{title}</Card.Title>
+                <Card.Text>{description}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
         ))}
-      </Stack>
+      </Row>
     </Container>
   );
 };
