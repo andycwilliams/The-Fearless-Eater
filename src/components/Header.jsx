@@ -9,7 +9,9 @@ import Navbar from "react-bootstrap/Navbar";
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {};
+  const toggleDarkMode = () => {
+    setDarkMode(true);
+  };
 
   return (
     <Navbar
@@ -51,6 +53,9 @@ const Header = () => {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#menu">Menu</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#accolades">Accolades</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#contact">Contact</Nav.Link>

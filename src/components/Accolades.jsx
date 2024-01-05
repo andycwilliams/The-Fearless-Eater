@@ -29,10 +29,54 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import ToggleButton from "react-bootstrap/ToggleButton";
 
+const accoladesList = [
+  {
+    image: "assets/awardPlaceholder1.svg",
+    title: "Award 1",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
+  },
+  {
+    image: "assets/awardPlaceholder1.svg",
+    title: "Award 2",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
+  },
+  {
+    image: "assets/awardPlaceholder1.svg",
+    title: "Award 3",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
+  },
+];
+
 const Accolades = () => {
   return (
-    <div>Accolades</div>
-  )
-}
+    <Container
+      className="pageSection p-3"
+      id="accolades"
+      // fluid
+    >
+      <Card.Title className="text-center fs-2">Accolades</Card.Title>
+      <Stack direction="horizontal" gap={5}>
+        {accoladesList.map(({ image, title, description }, idx) => (
+          <Card className="p-2" key={idx}>
+            <Card.Img
+              // variant="top"
+              src={image}
+              width="140"
+              height="140"
+              alt=""
+            />
+            <Card.Body>
+              <Card.Title>{title}</Card.Title>
+              <Card.Text>{description}</Card.Text>
+            </Card.Body>
+          </Card>
+        ))}
+      </Stack>
+    </Container>
+  );
+};
 
-export default Accolades
+export default Accolades;

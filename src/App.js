@@ -1,23 +1,25 @@
-// React Imports
-// import { useState } from "react";
-// React Router Bootstrap Imports
-// import { LinkContainer } from 'react-router-bootstrap';
-// Custom Imports
+// Styling Imports
 import "./App.css";
-import { About, ContactForm, Footer, Header, Hero, Menu } from "./components";
-
 // import "../scss/custom.scss";
+// Component Imports
+import {
+  About,
+  Accolades,
+  ContactForm,
+  Footer,
+  Header,
+  Hero,
+  Menu,
+} from "./components";
 
 const App = () => {
   return (
-    <div
-      // className="p-1"
-      id="home"
-    >
+    <div id="home">
       <Header />
       <Hero />
       <About />
       <Menu />
+      <Accolades />
       <ContactForm />
       <Footer />
     </div>
