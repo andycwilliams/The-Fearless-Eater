@@ -52,32 +52,32 @@ const accoladesList = [
 
 const Accolades = () => {
   return (
-    <Container
-      className="pageSection p-3"
-      id="accolades"
-      // fluid
-    >
-      <Card.Title className="text-center fs-2">Accolades</Card.Title>
-      <Card.Text className="text-center ">
-        See some of our awards and recognition.
-      </Card.Text>
-      <Row className="mt-3">
+    <Container className="pageSection py-3 px-5 text-center" id="accolades">
+      <Card.Title className="fs-2">Accolades</Card.Title>
+      <Card.Text>See some of our awards and recognition.</Card.Text>
+      <Row className="">
         {accoladesList.map(({ image, title, description }, idx) => (
-          <Col key={idx} xs={12} sm={6} md={4} gap={1}>
+          <Col key={idx} xs={12} sm={6} md={4}>
             <Card
-              className="text-center p-2"
+              className="card mb-4 rounded-5 shadow-sm"
               key={idx}
-              style={{ borderRadius: "5%" }}
+              style={{
+                // maxWidth: "300px",
+                // maxHeight: "300px",
+                height: "auto",
+              }}
             >
+              <Card.Title className="py-3">
+                <h4 className="my-0">{title}</h4>
+              </Card.Title>
               <Card.Img
                 // variant="top"
                 src={image}
-                width="140"
-                height="140"
+                width="120"
+                height="120"
                 alt=""
               />
               <Card.Body>
-                <Card.Title>{title}</Card.Title>
                 <Card.Text>{description}</Card.Text>
               </Card.Body>
             </Card>

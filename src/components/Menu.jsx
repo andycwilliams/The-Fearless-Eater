@@ -8,39 +8,39 @@ const menuItems = [
   {
     itemName: "Bread & Butter",
     itemDescription: "Homemade focaccia, clarified butter",
-    itemPrice: 10.75,
+    itemPrice: "10.75",
   },
   {
     itemName: "Fried Cauliflower Bites",
     itemDescription:
       "Served with choice of ranch (V), Bleu cheese (VEG), or vegan buffalo (V)",
-    itemPrice: 14.37,
+    itemPrice: " 14.37",
   },
   {
     itemName: "Hummus Plate",
     itemDescription: "Organic hummus with crudités",
-    itemPrice: 12.21,
+    itemPrice: "12.21",
   },
   {
     itemName: "Mixed Greens",
     itemDescription:
       "Red wine vinaigrette, seasonal fruit, walnuts, blue cheese",
-    itemPrice: 20,
+    itemPrice: "20",
   },
   {
     itemName: "item",
     itemDescription: "description",
-    itemPrice: 400,
+    itemPrice: "9001",
   },
   {
-    itemName: "item2",
+    itemName: "item",
     itemDescription: "description",
-    itemPrice: 400,
+    itemPrice: "400,000",
   },
   {
-    itemName: "item3",
+    itemName: "item",
     itemDescription: "description",
-    itemPrice: 400,
+    itemPrice: "400",
   },
 ];
 
@@ -66,14 +66,16 @@ const Menu = () => {
         >
           <Card.Title className="text-center fs-2">Menu</Card.Title>
           <Card.Text className="text-center">Small Plates</Card.Text>
-          {menuItems.map(({ itemName, itemDescription, itemPrice }) => (
+          {menuItems.map(({ itemName, itemDescription, itemPrice }, idx) => (
             <div
-              key={itemName}
+              key={idx}
               // style={{ padding: 10 }}
+              className="mb-2"
             >
               <Card.Title>{itemName}</Card.Title>
               <Card.Text>
-                <small>{itemDescription + " " + itemPrice}</small>
+                {itemDescription}{" "}
+                <small className="fw-light">{itemPrice}</small>
               </Card.Text>
             </div>
           ))}

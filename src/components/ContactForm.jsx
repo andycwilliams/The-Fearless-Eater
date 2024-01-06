@@ -55,23 +55,17 @@ const ContactForm = () => {
     <Container
       className="pageSection p-3"
       id="contact"
-      // className="mt-5 px-5"
       // sm={12}
-      // fluid
       style={{ maxWidth: "600px" }}
     >
-      <Card.Title className="text-center">
+      <Card.Title className="text-center ">
         <h2>Contact</h2>
       </Card.Title>
-      <Card.Text
-      // className="px-5"
-      >
+      <Card.Text>
         Contact us to reserve a time, add dietary restrictions, or simply to ask
         question. We do our best to accommodate all needs.
       </Card.Text>
-      <Card.Text
-      // className="px-5"
-      >
+      <Card.Text>
         You can reach us by phone (555) 555-5555, by email example@address.com,
         or simply send us a message using this form:
       </Card.Text>
@@ -137,12 +131,11 @@ const ContactForm = () => {
           variant="primary"
           type="submit"
           className="rounded-pill"
-          style={{ minWidth: "100px" }}
+          style={{ minWidth: "90px" }}
         >
           Send
         </Button>
       </Form>
-
       {messageSuccess ? (
         <Alert variant="success" className="mx-auto">
           Your message was successfully sent!

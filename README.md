@@ -2,9 +2,9 @@
 
 Web page for a fictional small business.
 
-Uses React and Bootstrap. Features functioning contact form with EmailJS.
+Uses React and Bootstrap 5. Features functioning contact form with EmailJS.
 
-To add: Dark Mode
+TODO: Add dark mode, complete contact form
 
 Some WIP styling courtesy of:
 https://github.com/bibeva/React-Bootstrap-Project-Corporate/

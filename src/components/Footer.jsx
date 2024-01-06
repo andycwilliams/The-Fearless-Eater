@@ -25,8 +25,10 @@ const BusinessHours = () => {
 
 const Copyright = () => {
   return (
-    <Row className="text-center py-1 fw-light border-top">
-      <Col sm={12}>{"Copyright ©" + dayjs().year() + "."}</Col>
+    <Row className="text-center py-1 border-top">
+      <Col className="text-muted" sm={12}>
+        {"Copyright ©" + dayjs().year()}
+      </Col>
       <Col sm={12}>
         <a color="inherit" href="/">
           The Fearless Eater
