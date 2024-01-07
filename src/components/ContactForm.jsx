@@ -17,9 +17,6 @@ const ContactForm = () => {
   const form = useRef();
 
   const handleSubmit = async (e) => {
-    console.log(process.env.CONTACT_SERVICE);
-    console.log(process.env.CONTACT_FORM);
-    console.log(process.env.YOUR_PUBLIC_KEY);
     e.preventDefault();
 
     emailjs
@@ -36,7 +33,7 @@ const ContactForm = () => {
           e.target.reset();
           setTimeout(() => {
             setMessageSuccess(false);
-          }, 5000);
+          }, 7000);
         },
         () => {
           console.error();
@@ -46,26 +43,12 @@ const ContactForm = () => {
           }, 5000);
         }
       );
-    // e.target.reset();
-
-    // try {
-    //   await setShowAlert(true);
-    // } catch (error) {
-    //   console.log(error);
-    //   setMessageFailure(true);
-    // } finally {
-    //   setTimeout(() => {
-    //     setShowAlert(false);
-    //     setMessageSuccess(true);
-    //   }, 1000);
-    // }
   };
 
   return (
     <Container
       className="pageSection p-3"
       id="contact"
-      // sm={12}
       style={{ maxWidth: "600px" }}
     >
       <Card.Title className="text-center ">
