@@ -1,5 +1,5 @@
 // React Imports
-import { useState } from "react";
+import { useRef, useState } from "react";
 // Bootstrap Imports
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
@@ -14,23 +14,20 @@ import emailjs from "@emailjs/browser";
 const ContactForm = () => {
   const [messageSuccess, setMessageSuccess] = useState(false);
   const [messageFailure, setMessageFailure] = useState(false);
-  const [validated, setValidated] = useState(false);
+  const form = useRef();
 
   const handleSubmit = async (e) => {
-    const form = e.currentTarget;
+    console.log(process.env.CONTACT_SERVICE);
+    console.log(process.env.CONTACT_FORM);
+    console.log(process.env.YOUR_PUBLIC_KEY);
     e.preventDefault();
-
-    if (form.checkValidity() === false) {
-      e.stopPropagation();
-    }
-    setValidated(true);
 
     emailjs
       .sendForm(
-        process.env.CONTACT_SERVICE,
-        process.env.CONTACT_FORM,
+        "service_co2agxf",
+        "template_20pnwni",
         form.current,
-        process.env.YOUR_PUBLIC_KEY
+        "AkBl59Ya3226OfPyQ"
       )
       .then(
         (result) => {
@@ -82,7 +79,7 @@ const ContactForm = () => {
         You can reach us by phone (555) 555-5555, by email example@address.com,
         or simply send us a message using this form:
       </Card.Text>
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      <Form ref={form} onSubmit={handleSubmit}>
         <Row>
           <Form.Group
             as={Col}
