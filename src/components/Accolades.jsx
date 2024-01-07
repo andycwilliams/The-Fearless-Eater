@@ -31,19 +31,19 @@ import ToggleButton from "react-bootstrap/ToggleButton";
 
 const accoladesList = [
   {
-    image: "assets/awardPlaceholder1.svg",
+    image: "assets/award_placeholder.svg",
     title: "Award 1",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
   },
   {
-    image: "assets/awardPlaceholder1.svg",
+    image: "assets/award_placeholder.svg",
     title: "Award 2",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
   },
   {
-    image: "assets/awardPlaceholder1.svg",
+    image: "assets/award_placeholder.svg",
     title: "Award 3",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
@@ -73,9 +73,10 @@ const Accolades = () => {
               <Card.Img
                 // variant="top"
                 src={image}
-                width="120"
-                height="120"
-                alt=""
+                width="120px"
+                height="120px"
+                alt="Placeholder for award"
+                style={{ backgroundColor: "#fff" }}
               />
               <Card.Body>
                 <Card.Text>{description}</Card.Text>

@@ -10,7 +10,6 @@ const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
-
     if (document.documentElement.getAttribute("data-bs-theme") === "dark") {
       document.documentElement.setAttribute("data-bs-theme", "light");
       setDarkMode(false);
@@ -22,18 +21,21 @@ const Header = () => {
 
   return (
     <Navbar
-      expand="md"
       sticky="top"
+      // className="bg-white"
+      expand="md"
       collapseOnSelect
       // className="bg-body-primary"
       // className="bg-body-primary justify-content-between"
-      // bg="dark"
+      bg={darkMode ? "dark" : "white"}
       // bg="primary"
-      // data-bs-theme="dark"
       style={{
         // display: "flex",
         // justifyContent: "between",
-        borderBottom: "1px solid #000000",
+        borderBottom: "1px solid #000",
+        // borderBottom: {
+        //   ...(darkMode ? "1px solid #fff" : "1px solid #000"),
+        // },
       }}
     >
       <Container fluid>
@@ -44,13 +46,8 @@ const Header = () => {
           The Fearless Eater
         </Navbar.Brand>
         <Navbar.Toggle />
-        <Navbar.Collapse
-          className="justify-content-end flex-grow-1 pe-1"
-          // className="justify-content-end"
-        >
-          <Nav
-          // className="me-auto"
-          >
+        <Navbar.Collapse className="justify-content-end flex-grow-1 pe-1">
+          <Nav>
             <Nav.Item className="navButton">
               <Nav.Link href="#home">Home</Nav.Link>
             </Nav.Item>
@@ -70,19 +67,21 @@ const Header = () => {
               <Form.Check
                 className="m-2"
                 type="switch"
-                // variant="secondary"
                 id="light-mode-switch"
                 label={
                   darkMode ? (
-                    <img src="assets\moon.svg" alt="Moon icon" />
+                    <img
+                      src="assets\dark_mode_white_24dp.svg"
+                      alt="Moon icon"
+                    />
                   ) : (
-                    <img src="assets\sun.svg" alt="Sun icon" />
+                    <img
+                      src="assets\light_mode_black_24dp.svg"
+                      alt="Sun icon"
+                    />
                   )
                 }
-                // onClick={() => {
-                //   setDarkMode(!darkMode);
-                // }}
-                onChange={toggleDarkMode}
+                onClick={toggleDarkMode}
               />
             </Nav.Item>
           </Nav>

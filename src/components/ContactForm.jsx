@@ -32,10 +32,24 @@ const ContactForm = () => {
         form.current,
         process.env.YOUR_PUBLIC_KEY
       )
-      .then((result) => {
-        console.log(result.text);
-      }, console.error());
-    e.target.reset();
+      .then(
+        (result) => {
+          console.log(result.text);
+          setMessageSuccess(true);
+          e.target.reset();
+          setTimeout(() => {
+            setMessageSuccess(false);
+          }, 5000);
+        },
+        () => {
+          console.error();
+          setMessageFailure(true);
+          setTimeout(() => {
+            setMessageFailure(false);
+          }, 5000);
+        }
+      );
+    // e.target.reset();
 
     // try {
     //   await setShowAlert(true);

@@ -6,6 +6,8 @@ Uses React and Bootstrap 5. Features functioning contact form with EmailJS.
 
 TODO: Add dark mode, complete contact form
 
+Icons from https://fonts.google.com/
+
 Some WIP styling courtesy of:
 https://github.com/bibeva/React-Bootstrap-Project-Corporate/
 
