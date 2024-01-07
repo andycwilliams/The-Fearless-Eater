@@ -10,7 +10,14 @@ const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
-    setDarkMode(true);
+
+    if (document.documentElement.getAttribute("data-bs-theme") === "dark") {
+      document.documentElement.setAttribute("data-bs-theme", "light");
+      setDarkMode(false);
+    } else {
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+      setDarkMode(true);
+    }
   };
 
   return (
@@ -24,7 +31,6 @@ const Header = () => {
       // bg="primary"
       // data-bs-theme="dark"
       style={{
-        backgroundColor: "#ffffff",
         // display: "flex",
         // justifyContent: "between",
         borderBottom: "1px solid #000000",

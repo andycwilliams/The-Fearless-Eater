@@ -15,7 +15,6 @@ const ContactForm = () => {
   const [messageSuccess, setMessageSuccess] = useState(false);
   const [messageFailure, setMessageFailure] = useState(false);
   const [validated, setValidated] = useState(false);
-  const [showAlert, setShowAlert] = useState(true);
 
   const handleSubmit = async (e) => {
     const form = e.currentTarget;
@@ -38,17 +37,17 @@ const ContactForm = () => {
       }, console.error());
     e.target.reset();
 
-    try {
-      await setShowAlert(true);
-    } catch (error) {
-      console.log(error);
-      setMessageFailure(true);
-    } finally {
-      setTimeout(() => {
-        setShowAlert(false);
-        setMessageSuccess(true);
-      }, 1000);
-    }
+    // try {
+    //   await setShowAlert(true);
+    // } catch (error) {
+    //   console.log(error);
+    //   setMessageFailure(true);
+    // } finally {
+    //   setTimeout(() => {
+    //     setShowAlert(false);
+    //     setMessageSuccess(true);
+    //   }, 1000);
+    // }
   };
 
   return (
