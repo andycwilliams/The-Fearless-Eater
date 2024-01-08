@@ -52,7 +52,6 @@ const Header = () => {
               <Stack direction="horizontal" className="align-items-center">
                 <Form.Check
                   className="m-0"
-                  // className="m-2"
                   type="switch"
                   id="light-mode-switch"
                   label=""
@@ -67,7 +66,6 @@ const Header = () => {
                   alt={darkMode ? "Moon icon" : "Sun icon"}
                   width="24"
                   height="24"
-                  // className="ms-2 mb-1"
                 />
               </Stack>
             </Nav.Item>

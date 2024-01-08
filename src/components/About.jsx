@@ -8,50 +8,19 @@ import Row from "react-bootstrap/Row";
 const About = () => {
   return (
     <Container className="pageSection p-3" id="about">
-      {/* <Fade in> */}
-      <Row
-      // className="col-md-8"
-      >
-        <Col
-          // sm="true"
-          md={6}
-          // className="p-3"
-        >
+      <Row>
+        <Col md={6}>
           <Image
             src="assets\aboutImage.jpeg"
             alt="The Fearless Eater about section"
             style={{
-              // height: 200,
-              // backgroundSize: "cover",
-              // backgroundSize: "contain",
-              // backgroundPosition: "center",
-              // backgroundRepeat: "no-repeat",
-              // mx: "auto",
-              // objectFit: "contain",
-              // maxWidth: "90%",
-              // height: '70px',
-              // mb: "15%",
-              // padding: 50,
-              // margin: "20 20 20 20",
               borderRadius: "5px",
               boxShadow: "0 5px 5px 0 rgba(0, 0, 0, 0.2)",
             }}
             fluid
           />
         </Col>
-        <Col
-          // sm="true"
-          md={6}
-          // className="p-3"
-          style={
-            {
-              // display: "flex",
-              // flexDirection: "column",
-              // justifyContent: "flex-start",
-              // alignItems: "center",
-            }
-          }
-        >
+        <Col md={6}>
           <Card.Title className="text-center fs-2">About</Card.Title>
           <Card.Text className="text-center">
             <>Est. 1997</>
@@ -75,7 +44,6 @@ const About = () => {
           </Card.Text>
         </Col>
       </Row>
-      {/* </Fade> */}
     </Container>
   );
 };

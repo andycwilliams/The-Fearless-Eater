@@ -7,19 +7,25 @@ import Row from "react-bootstrap/Row";
 const accoladesList = [
   {
     image: "assets/award_placeholder.svg",
-    title: "Award 1",
+    title: "Culinary Excellence Award",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
   },
   {
     image: "assets/award_placeholder.svg",
-    title: "Award 2",
+    title: "Dining Innovation Prize",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
   },
   {
     image: "assets/award_placeholder.svg",
-    title: "Award 3",
+    title: "Eatery Achievement Trophy",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
+  },
+  {
+    image: "assets/award_placeholder.svg",
+    title: "Epicurean Plaque",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa sunt harum soluta dicta eos nihil libero debitis. Odit, aspernatur harum?",
   },
@@ -28,7 +34,7 @@ const accoladesList = [
 const AwardCard = ({ image, title, description }) => (
   <Card className="card mb-4 rounded-3 shadow-sm" style={{ height: "auto" }}>
     <Card.Title className="py-3">
-      <h4 className="my-0">{title}</h4>
+      <div className="my-0 fs-5">{title}</div>
     </Card.Title>
     <Card.Img
       className="rounded-3"
@@ -38,7 +44,9 @@ const AwardCard = ({ image, title, description }) => (
       style={{ backgroundColor: "#fff" }}
     />
     <Card.Body>
-      <Card.Text>{description}</Card.Text>
+      <Card.Text>
+        <small>{description}</small>
+      </Card.Text>
     </Card.Body>
   </Card>
 );
@@ -50,7 +58,7 @@ const Accolades = () => {
       <Card.Text>See some of our awards and recognition.</Card.Text>
       <Row>
         {accoladesList.map(({ image, title, description }, idx) => (
-          <Col key={idx} xs={12} sm={6} md={4}>
+          <Col key={idx} xs={12} sm={6} md={3}>
             <AwardCard image={image} title={title} description={description} />
           </Col>
         ))}

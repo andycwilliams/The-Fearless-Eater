@@ -1,6 +1,3 @@
-// Styling Imports
-import "./App.css";
-// import "../scss/custom.scss";
 // Component Imports
 import {
   About,
@@ -11,6 +8,8 @@ import {
   Hero,
   Menu,
 } from "./components";
+// Styling Imports
+import "./App.css";
 
 const App = () => {
   return (
