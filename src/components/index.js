@@ -1,3 +1,4 @@
+// Component Imports
 import About from "./About";
 import Accolades from "./Accolades";
 import ContactForm from "./ContactForm";

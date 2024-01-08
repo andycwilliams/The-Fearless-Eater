@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-// emailjs Imports
+// Dependency Imports
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
@@ -28,7 +28,6 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setMessageSuccess(true);
           e.target.reset();
           setTimeout(() => {
@@ -36,7 +35,6 @@ const ContactForm = () => {
           }, 7000);
         },
         () => {
-          console.error();
           setMessageFailure(true);
           setTimeout(() => {
             setMessageFailure(false);
@@ -120,14 +118,16 @@ const ContactForm = () => {
           />
         </Form.Group>
 
-        <Button
-          variant="primary"
-          type="submit"
-          className="rounded-pill"
-          style={{ minWidth: "90px" }}
-        >
-          Send
-        </Button>
+        <div className="d-flex justify-content-center">
+          <Button
+            variant="primary"
+            type="submit"
+            className="rounded-pill"
+            style={{ minWidth: "90px" }}
+          >
+            Send
+          </Button>
+        </div>
       </Form>
       {messageSuccess ? (
         <Alert variant="success" className="mx-auto">
