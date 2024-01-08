@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Stack from "react-bootstrap/Stack";
-// Other Imports
+// Dependency Imports
 import dayjs from "dayjs";
 
 const BusinessHours = () => {
@@ -23,16 +23,44 @@ const BusinessHours = () => {
   );
 };
 
+const SocialLinkas = () => (
+  <Stack direction="vertical">
+    <Stack direction="horizontal" className="justify-content-center" gap={3}>
+      <a href="/" aria-label="Facebook">
+        <img
+          src="assets/facebook.svg"
+          alt="Facebook icon"
+          width="24"
+          height="24"
+        />
+      </a>
+      <a href="/" aria-label="Twitter-X">
+        <img
+          src="assets/twitter-x.svg"
+          alt="Twitter-X icon"
+          width="24"
+          height="24"
+        />
+      </a>
+      <a href="/" aria-label="Instagram">
+        <img
+          src="assets/instagram.svg"
+          alt="Instagram icon"
+          width="24"
+          height="24"
+        />
+      </a>
+    </Stack>
+  </Stack>
+);
+
 const Copyright = () => {
+  const currentYear = dayjs().year();
+
   return (
-    <Row className="text-center py-1 border-top">
-      <Col className="text-muted" sm={12}>
-        {"Copyright ©" + dayjs().year()}
-      </Col>
-      <Col sm={12}>
-        <a color="inherit" href="/">
-          The Fearless Eater
-        </a>
+    <Row className="text-center py-3 border-top bg-body-secondary">
+      <Col className="text-muted" xs={12}>
+        The Fearless Eater &copy; {currentYear}
       </Col>
     </Row>
   );
@@ -66,16 +94,18 @@ const Footer = () => {
       <Container className="pt-3" fluid>
         <Row>
           <Col xs={12} sm={6} md={3} className="text-center">
-            <h5 component="h3">
+            <h5>
               <b>Address</b>
             </h5>
-            <Stack direction="vertical" className="mb-3">
-              <small>123 Fake Street</small>
-              <small>Chicago, IL 11111</small>
-            </Stack>
+            <address>
+              <Stack direction="vertical" className="mb-3">
+                <small>123 Fake Street</small>
+                <small>Chicago, IL 11111</small>
+              </Stack>
+            </address>
           </Col>
           <Col xs={12} sm={6} md={3} className="text-center">
-            <h5 component="h3">
+            <h5>
               <b>Contact</b>
             </h5>
             <Stack direction="vertical" className="mb-3">
@@ -88,47 +118,16 @@ const Footer = () => {
             </Stack>
           </Col>
           <Col xs={12} sm={6} md={3} className="text-center mb-3">
-            <h5 component="h3">
+            <h5>
               <b>Hours</b>
             </h5>
             <BusinessHours />
           </Col>
           <Col xs={12} sm={6} md={3} className="text-center mb-3">
-            <h5 component="h3">
+            <h5>
               <b>Follow Us</b>
             </h5>
-            <Stack direction="vertical">
-              <Stack
-                direction="horizontal"
-                className="justify-content-center"
-                gap={3}
-              >
-                <a href="/">
-                  <img
-                    src="assets\facebook.svg"
-                    alt="Facebook icon"
-                    width="24"
-                    height="24"
-                  />
-                </a>
-                <a href="/">
-                  <img
-                    src="assets\twitter-x.svg"
-                    alt="Twitter-X icon"
-                    width="24"
-                    height="24"
-                  />
-                </a>
-                <a href="/">
-                  <img
-                    src="assets\instagram.svg"
-                    alt="Instagram icon"
-                    width="24"
-                    height="24"
-                  />
-                </a>
-              </Stack>
-            </Stack>
+            <SocialLinkas />
           </Col>
         </Row>
         <Copyright />

@@ -1,39 +1,42 @@
+import { Container, Row, Col } from "react-bootstrap";
+
 const Hero = () => {
   return (
-    <div
-    // style={{ position: "relative" }}
-    >
+    <div style={{ position: "relative" }}>
       <div
         aria-label="The Fearless Eater hero section"
-        className="heroSectionBG"
         style={{
           width: "100%",
-          height: "100vh",
+          height: "75vh",
           backgroundImage: `url(assets/heroImage.jpg)`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          // maxWidth: "100%",
-          // height: "208px",
-          // marginTop: "-70px",
-          // fontSize: "50px",
-          // overflow: false,
-          // margin: 0,
-          // padding: 0,
-          // boxSizing: "border-box",
         }}
       />
-      <div
-        className="heroSectionText"
-        style={{
-          color: "#ffffff",
-          position: "absolute",
-          bottom: "0px",
-          left: "64px",
-        }}
-      >
-        <h1>The Fearless Eater</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
+      <Container>
+        <Row
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            textAlign: "left",
+          }}
+        >
+          <Col
+            xs={12}
+            md={6}
+            style={{
+              color: "#ffffff",
+              marginBottom: "25px",
+              marginLeft: "25px",
+            }}
+          >
+            <h1 style={{ fontSize: "2.5em" }}>The Fearless Eater</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };

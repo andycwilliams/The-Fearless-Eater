@@ -34,7 +34,7 @@ const AwardCard = ({ image, title, description }) => (
       className="rounded-3"
       src={image}
       height="120px"
-      alt="Placeholder for award"
+      alt={`Placeholder for ${title}`}
       style={{ backgroundColor: "#fff" }}
     />
     <Card.Body>

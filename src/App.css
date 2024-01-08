@@ -14,25 +14,41 @@ html {
   box-sizing: inherit;
 }
 
+/* 
+.navbarTestButton {
+  color: #f64b4b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  background-color: "purple";
+}
+
+.navbarTestButton:hover,
+.navbarTestButton:focus {
+  text-decoration: none;
+  color: #f41a1a;
+} */
+
 /* body { */
 /* text-align: left; */
 /* padding: 0; */
 /* margin: 0; */
 /* } */
 
-img {
-  /* max-width: 100%; */
-  /* height: auto; */
-  /* vertical-align: top; */
-  /* box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2); */
-  /* padding: 5 5 5 5; */
-  /* margin: 5; */
-}
+/* img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 5 5 5 5;
+  margin: 5;
+} 
+*/
 
-.pageSection {
-  /* margin: "100px";
-  background-color: "red"; */
-}
+/* .pageSection {
+  margin: "100px";
+  background-color: "red";
+} 
+*/
 
 /* .heroSectionBG {
   width: "100%";
@@ -48,18 +64,6 @@ img {
   bottom: "0px";
   left: "64px";
 } */
-
-.navButton {
-  color: #f64b4b;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.navButton:hover,
-.navButton:focus {
-  text-decoration: none;
-  color: #f41a1a;
-}
 
 /* .go-top {
   width: 50px;
