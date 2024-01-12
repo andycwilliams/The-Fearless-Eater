@@ -1,0 +1,8 @@
+{
+  "short_name": "The Fearless Eater",
+  "name": "The Fearless Eater Homepage",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
